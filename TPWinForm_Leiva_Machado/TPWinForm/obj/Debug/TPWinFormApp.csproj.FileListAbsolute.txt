@@ -1,0 +1,15 @@
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.exe.config
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.exe
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.pdb
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Dominio.dll
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Negocio.dll
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Dominio.pdb
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Negocio.pdb
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.AssemblyReference.cache
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Form1.resources
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Properties.Resources.resources
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.GenerateResource.cache
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.CoreCompileInputs.cache
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.CopyComplete
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.exe
+E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.pdb
