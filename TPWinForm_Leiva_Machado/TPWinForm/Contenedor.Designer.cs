@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm
 {
-    partial class Form1
+    partial class Contenedor
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -60,52 +60,60 @@
             this.ventanaHome.Name = "ventanaHome";
             this.ventanaHome.Size = new System.Drawing.Size(52, 20);
             this.ventanaHome.Text = "Home";
+            this.ventanaHome.Click += new System.EventHandler(this.ventanaHome_Click);
             // 
             // ventanaListado
             // 
             this.ventanaListado.Name = "ventanaListado";
             this.ventanaListado.Size = new System.Drawing.Size(57, 20);
             this.ventanaListado.Text = "Listado";
+            this.ventanaListado.Click += new System.EventHandler(this.ventanaListado_Click);
             // 
             // ventanaBusqueda
             // 
             this.ventanaBusqueda.Name = "ventanaBusqueda";
             this.ventanaBusqueda.Size = new System.Drawing.Size(71, 20);
             this.ventanaBusqueda.Text = "Busqueda";
+            this.ventanaBusqueda.Click += new System.EventHandler(this.ventanaBusqueda_Click);
             // 
             // ventanaAgregar
             // 
             this.ventanaAgregar.Name = "ventanaAgregar";
             this.ventanaAgregar.Size = new System.Drawing.Size(61, 20);
             this.ventanaAgregar.Text = "Agregar";
+            this.ventanaAgregar.Click += new System.EventHandler(this.ventanaAgregar_Click);
             // 
             // ventanaModificar
             // 
             this.ventanaModificar.Name = "ventanaModificar";
             this.ventanaModificar.Size = new System.Drawing.Size(70, 20);
             this.ventanaModificar.Text = "Modificar";
+            this.ventanaModificar.Click += new System.EventHandler(this.ventanaModificar_Click);
             // 
             // ventanaEliminar
             // 
             this.ventanaEliminar.Name = "ventanaEliminar";
             this.ventanaEliminar.Size = new System.Drawing.Size(62, 20);
             this.ventanaEliminar.Text = "Eliminar";
+            this.ventanaEliminar.Click += new System.EventHandler(this.ventanaEliminar_Click);
             // 
             // ventanaVerDetalle
             // 
             this.ventanaVerDetalle.Name = "ventanaVerDetalle";
             this.ventanaVerDetalle.Size = new System.Drawing.Size(73, 20);
             this.ventanaVerDetalle.Text = "Ver detalle";
+            this.ventanaVerDetalle.Click += new System.EventHandler(this.ventanaVerDetalle_Click);
             // 
-            // Form1
+            // Contenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.msNavegacion);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.msNavegacion;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Contenedor";
+            this.Text = "Catalogo Articulos";
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);
