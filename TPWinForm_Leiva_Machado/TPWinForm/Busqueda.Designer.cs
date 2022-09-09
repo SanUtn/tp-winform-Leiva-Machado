@@ -58,7 +58,7 @@ namespace TPWinForm
             this.Controls.Add(this.txbBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Busqueda";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Busqueda";
             this.ResumeLayout(false);
             this.PerformLayout();

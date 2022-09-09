@@ -51,7 +51,7 @@
             this.ventanaVerDetalle});
             this.msNavegacion.Location = new System.Drawing.Point(0, 0);
             this.msNavegacion.Name = "msNavegacion";
-            this.msNavegacion.Size = new System.Drawing.Size(800, 24);
+            this.msNavegacion.Size = new System.Drawing.Size(870, 24);
             this.msNavegacion.TabIndex = 0;
             this.msNavegacion.Text = "menuStrip1";
             // 
@@ -108,16 +108,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(870, 502);
             this.Controls.Add(this.msNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msNavegacion;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(886, 541);
+            this.MinimumSize = new System.Drawing.Size(886, 541);
             this.Name = "Contenedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Articulos";
-            //this.Load += new System.EventHandler(this.Contenedor_Load);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);

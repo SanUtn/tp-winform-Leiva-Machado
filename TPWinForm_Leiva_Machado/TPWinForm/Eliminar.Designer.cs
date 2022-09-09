@@ -50,7 +50,7 @@ namespace TPWinForm
             this.Controls.Add(this.lbEliminarTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Eliminar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Eliminar";
             this.ResumeLayout(false);
             this.PerformLayout();
