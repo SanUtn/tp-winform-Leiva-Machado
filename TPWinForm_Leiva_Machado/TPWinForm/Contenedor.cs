@@ -25,6 +25,15 @@ namespace TPWinForm
             Home ventanaHome = new Home();
             ventanaHome.MdiParent = this;
             ventanaHome.Show();
+            foreach (var item in Application.OpenForms)
+            {
+                if(item.GetType() == typeof(Home))
+                {
+                
+                    return;
+                }
+            }
+            
         }
 
         private void ventanaListado_Click(object sender, EventArgs e)
@@ -32,6 +41,14 @@ namespace TPWinForm
             Listado ventanaListado = new Listado();
             ventanaListado.MdiParent = this;
             ventanaListado.Show();
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(Listado))
+                {
+                    
+                    return;
+                }
+            }
         }
 
         private void ventanaBusqueda_Click(object sender, EventArgs e)
@@ -67,6 +84,13 @@ namespace TPWinForm
             VerDetalle ventanaVerDetalle = new VerDetalle();
             ventanaVerDetalle.MdiParent = this;
             ventanaVerDetalle.Show();
+        }
+
+        private void Contenedor_Load(object sender, EventArgs e)
+        {
+            Home ventanaHome = new Home();
+            ventanaHome.MdiParent = this;
+            ventanaHome.Show();
         }
     }
 }

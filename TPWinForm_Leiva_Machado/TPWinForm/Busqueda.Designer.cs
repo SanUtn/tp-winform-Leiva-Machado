@@ -56,7 +56,9 @@ namespace TPWinForm
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.txbBusqueda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Busqueda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda";
             this.ResumeLayout(false);
             this.PerformLayout();

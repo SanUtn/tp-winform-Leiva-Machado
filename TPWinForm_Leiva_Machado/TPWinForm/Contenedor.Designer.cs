@@ -110,10 +110,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.msNavegacion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msNavegacion;
+            this.MaximizeBox = false;
             this.Name = "Contenedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Articulos";
+            this.Load += new System.EventHandler(this.Contenedor_Load);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);

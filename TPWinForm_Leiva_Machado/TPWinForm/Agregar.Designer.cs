@@ -59,7 +59,9 @@ namespace TPWinForm
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lbAgregarTitulo);
             this.Controls.Add(this.btnAgregar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar";
             this.ResumeLayout(false);
             this.PerformLayout();

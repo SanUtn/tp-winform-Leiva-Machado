@@ -20,3 +20,26 @@ E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiv
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Eliminar.resources
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Modificar.resources
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.VerDetalle.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.exe.config
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.exe
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\TPWinForm.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Dominio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Negocio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Dominio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\bin\Debug\Negocio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.AssemblyReference.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Agregar.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Busqueda.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Contenedor.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Eliminar.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Home.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Listado.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Modificar.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.Properties.Resources.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.VerDetalle.resources
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.GenerateResource.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.CoreCompileInputs.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinFormApp.csproj.CopyComplete
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.exe
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\TPWinForm\obj\Debug\TPWinForm.pdb
