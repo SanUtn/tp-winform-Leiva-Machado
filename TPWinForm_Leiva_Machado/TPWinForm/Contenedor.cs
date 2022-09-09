@@ -15,44 +15,30 @@ namespace TPWinForm
         public Contenedor()
         {
             InitializeComponent();
-            //Home ventanaHome = new Home();
-            //ventanaHome.MdiParent = this;
-            //ventanaHome.Show();
+            Home ventanaHome = new Home();
+            ventanaHome.MdiParent = this;
+            ventanaHome.Show();
         }
 
         private void ventanaHome_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Home ventanaHome = new Home();
             ventanaHome.MdiParent = this;
             ventanaHome.Show();
-            foreach (var item in Application.OpenForms)
-            {
-                if(item.GetType() == typeof(Home))
-                {
-                
-                    return;
-                }
-            }
-            
         }
 
         private void ventanaListado_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Listado ventanaListado = new Listado();
             ventanaListado.MdiParent = this;
             ventanaListado.Show();
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(Listado))
-                {
-                    
-                    return;
-                }
-            }
         }
 
         private void ventanaBusqueda_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Busqueda ventanaBusqueda = new Busqueda();
             ventanaBusqueda.MdiParent = this;
             ventanaBusqueda.Show();
@@ -60,6 +46,7 @@ namespace TPWinForm
 
         private void ventanaAgregar_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Agregar ventanaAgregar = new Agregar();
             ventanaAgregar.MdiParent = this;
             ventanaAgregar.Show();
@@ -67,6 +54,7 @@ namespace TPWinForm
 
         private void ventanaModificar_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Modificar ventanaModificar = new Modificar();
             ventanaModificar.MdiParent = this;
             ventanaModificar.Show();
@@ -74,6 +62,7 @@ namespace TPWinForm
 
         private void ventanaEliminar_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             Eliminar ventanaEliminar = new Eliminar();
             ventanaEliminar.MdiParent = this;
             ventanaEliminar.Show();
@@ -81,16 +70,22 @@ namespace TPWinForm
 
         private void ventanaVerDetalle_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             VerDetalle ventanaVerDetalle = new VerDetalle();
             ventanaVerDetalle.MdiParent = this;
             ventanaVerDetalle.Show();
         }
 
-        private void Contenedor_Load(object sender, EventArgs e)
+        void cerrarForms()
         {
-            Home ventanaHome = new Home();
-            ventanaHome.MdiParent = this;
-            ventanaHome.Show();
+            List<Form> formularios = Application.OpenForms.Cast<Form>().Where(x => !(x is Contenedor))
+            .ToList(); //busca formularios abiertos y solo trae los que sean diferentes a Contenedor.
+
+            foreach (var item in formularios)
+            {
+                //los cierra
+                item.Close();
+            }
         }
     }
 }

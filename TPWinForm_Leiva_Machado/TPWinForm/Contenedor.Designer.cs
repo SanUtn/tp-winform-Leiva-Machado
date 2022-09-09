@@ -117,7 +117,7 @@
             this.Name = "Contenedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Articulos";
-            this.Load += new System.EventHandler(this.Contenedor_Load);
+            //this.Load += new System.EventHandler(this.Contenedor_Load);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);
