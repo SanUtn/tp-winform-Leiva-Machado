@@ -50,7 +50,7 @@ namespace TPWinForm
             this.Controls.Add(this.lbModificarTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Modificar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
             this.ResumeLayout(false);
             this.PerformLayout();
