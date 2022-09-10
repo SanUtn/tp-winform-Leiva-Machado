@@ -7,14 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
+using Helper;
+
 
 namespace TPWinForm
 {
     public partial class Listado : Form
     {
+        
         public Listado()
         {
             InitializeComponent();
         }
+
+        private void Listado_Load(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        public void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listaArticulos;
+            try
+            {
+                listaArticulos = negocio.listarArticulo();
+                dataListado.DataSource = listaArticulos;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
     }
 }

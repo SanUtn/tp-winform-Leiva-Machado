@@ -1,0 +1,11 @@
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Helper.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Helper.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\obj\Debug\Helper.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\obj\Debug\Helper.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Dominio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Negocio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Dominio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\bin\Debug\Negocio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Helper\obj\Debug\Helper.csproj.CopyComplete

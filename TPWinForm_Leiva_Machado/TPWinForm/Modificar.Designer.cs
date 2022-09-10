@@ -229,6 +229,7 @@ namespace TPWinForm
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
+            this.Load += new System.EventHandler(this.Modificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
