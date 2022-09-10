@@ -124,7 +124,6 @@ namespace TPWinForm
             this.lbMarca.Size = new System.Drawing.Size(50, 17);
             this.lbMarca.TabIndex = 8;
             this.lbMarca.Text = "Marca:";
-            this.lbMarca.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtImagen
             // 
@@ -168,7 +167,6 @@ namespace TPWinForm
             this.lbImagen.Size = new System.Drawing.Size(56, 17);
             this.lbImagen.TabIndex = 14;
             this.lbImagen.Text = "Imagen:";
-            this.lbImagen.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbPrecio
             // 
@@ -219,6 +217,7 @@ namespace TPWinForm
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.Agregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
