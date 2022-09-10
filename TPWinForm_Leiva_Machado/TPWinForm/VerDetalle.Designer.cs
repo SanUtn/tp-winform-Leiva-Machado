@@ -52,6 +52,7 @@ namespace TPWinForm
             this.Name = "VerDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerDetalle";
+            this.Load += new System.EventHandler(this.VerDetalle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
