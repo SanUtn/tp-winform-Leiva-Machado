@@ -36,7 +36,7 @@ namespace TPWinForm
                 listaArticulos = negocio.listarArticulo();
                 dataListado.DataSource = listaArticulos;
                 dataListado.Columns["UrlImagen"].Visible = false;
-
+                cargarImagen(listaArticulos.First().UrlImagen);
             }
             catch (Exception ex)
             {
@@ -44,5 +44,25 @@ namespace TPWinForm
             }
         }
 
+
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbListado.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbListado.Load("https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png");
+            }
+        }
+
+        private void dataListado_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+            cargarImagen(articuloSeleccionado.UrlImagen);
+        }
     }
 }
