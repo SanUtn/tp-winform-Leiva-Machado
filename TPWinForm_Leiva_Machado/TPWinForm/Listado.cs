@@ -44,8 +44,6 @@ namespace TPWinForm
             }
         }
 
-
-
         private void cargarImagen(string imagen)
         {
             try

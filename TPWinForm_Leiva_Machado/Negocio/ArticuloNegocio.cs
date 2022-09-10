@@ -10,11 +10,11 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
+        private AccesoDatos datos = new AccesoDatos(); //cambio a una propiedad privada para no instanciar en todos los metodos
         public List<Articulo> listarArticulo()
         {
             List<Articulo> lista = new List<Articulo>();
 
-            AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("Select A.Codigo, A.Nombre,A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
@@ -54,5 +54,33 @@ namespace Negocio
             }
         }
 
+        public List<Articulo> buscarArticulo(Articulo buscado)
+        {
+            List<Articulo> encontrados = new List<Articulo>();
+            try
+            {
+                datos.setearConsulta("SELECT Nombre, ImagenUrl FROM ARTICULOS WHERE Nombre like @buscado");
+                datos.setearParametro("@buscado", "%"+buscado.NombreArticulo+"%"); //polemico
+                datos.ejecutarLectura();
+
+                while(datos.Lector.Read())
+                {
+                    Articulo art = new Articulo();
+                    art.NombreArticulo = (String)datos.Lector["Nombre"];
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    {
+                        art.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    }
+                    encontrados.Add(art);
+                }
+                    return encontrados;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
     }
 }
