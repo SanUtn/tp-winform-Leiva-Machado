@@ -35,12 +35,14 @@ namespace TPWinForm
             // lbHome
             // 
             this.lbHome.AutoSize = true;
-            this.lbHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHome.Location = new System.Drawing.Point(151, 182);
+            this.lbHome.Font = new System.Drawing.Font("Segoe UI Symbol", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbHome.Location = new System.Drawing.Point(241, 175);
             this.lbHome.Name = "lbHome";
-            this.lbHome.Size = new System.Drawing.Size(471, 73);
+            this.lbHome.Size = new System.Drawing.Size(339, 65);
             this.lbHome.TabIndex = 0;
             this.lbHome.Text = "BIENVENIDOS";
+            this.lbHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 

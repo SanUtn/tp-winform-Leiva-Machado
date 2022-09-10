@@ -29,35 +29,50 @@ namespace TPWinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataListado = new System.Windows.Forms.DataGridView();
+            this.tituloListado = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataListado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 259);
-            this.dataGridView1.TabIndex = 0;
+            this.dataListado.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListado.Location = new System.Drawing.Point(69, 91);
+            this.dataListado.Name = "dataListado";
+            this.dataListado.Size = new System.Drawing.Size(745, 259);
+            this.dataListado.TabIndex = 0;
+            // 
+            // tituloListado
+            // 
+            this.tituloListado.AutoSize = true;
+            this.tituloListado.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloListado.Location = new System.Drawing.Point(285, 27);
+            this.tituloListado.Name = "tituloListado";
+            this.tituloListado.Size = new System.Drawing.Size(288, 37);
+            this.tituloListado.TabIndex = 1;
+            this.tituloListado.Text = "Listado de Artículos";
             // 
             // Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 451);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tituloListado);
+            this.Controls.Add(this.dataListado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Listado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListado;
+        private System.Windows.Forms.Label tituloListado;
     }
 }
