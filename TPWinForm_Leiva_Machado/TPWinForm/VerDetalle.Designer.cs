@@ -35,12 +35,12 @@ namespace TPWinForm
             // lbVerDetalleTitulo
             // 
             this.lbVerDetalleTitulo.AutoSize = true;
-            this.lbVerDetalleTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVerDetalleTitulo.Location = new System.Drawing.Point(129, 28);
+            this.lbVerDetalleTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVerDetalleTitulo.Location = new System.Drawing.Point(294, 37);
             this.lbVerDetalleTitulo.Name = "lbVerDetalleTitulo";
-            this.lbVerDetalleTitulo.Size = new System.Drawing.Size(420, 55);
+            this.lbVerDetalleTitulo.Size = new System.Drawing.Size(278, 37);
             this.lbVerDetalleTitulo.TabIndex = 0;
-            this.lbVerDetalleTitulo.Text = "Ver detalle articulo";
+            this.lbVerDetalleTitulo.Text = "Ver detalle artículo";
             // 
             // VerDetalle
             // 

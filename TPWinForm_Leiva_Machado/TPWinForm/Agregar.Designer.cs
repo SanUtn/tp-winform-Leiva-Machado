@@ -29,36 +29,192 @@ namespace TPWinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.lbAgregarTitulo = new System.Windows.Forms.Label();
+            this.lbCodArticulo = new System.Windows.Forms.Label();
+            this.txtCodArticulo = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lbDescripcion = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lbMarca = new System.Windows.Forms.Label();
+            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.lbCategoria = new System.Windows.Forms.Label();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.lbImagen = new System.Windows.Forms.Label();
+            this.lbPrecio = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(211, 357);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // lbAgregarTitulo
             // 
             this.lbAgregarTitulo.AutoSize = true;
-            this.lbAgregarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAgregarTitulo.Location = new System.Drawing.Point(201, 25);
+            this.lbAgregarTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAgregarTitulo.Location = new System.Drawing.Point(311, 31);
             this.lbAgregarTitulo.Name = "lbAgregarTitulo";
-            this.lbAgregarTitulo.Size = new System.Drawing.Size(368, 55);
+            this.lbAgregarTitulo.Size = new System.Drawing.Size(246, 37);
             this.lbAgregarTitulo.TabIndex = 1;
-            this.lbAgregarTitulo.Text = "Agregar Articulo";
+            this.lbAgregarTitulo.Text = "Agregar Artículo";
+            // 
+            // lbCodArticulo
+            // 
+            this.lbCodArticulo.AutoSize = true;
+            this.lbCodArticulo.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodArticulo.Location = new System.Drawing.Point(209, 99);
+            this.lbCodArticulo.Name = "lbCodArticulo";
+            this.lbCodArticulo.Size = new System.Drawing.Size(103, 17);
+            this.lbCodArticulo.TabIndex = 2;
+            this.lbCodArticulo.Text = "Código Artículo:";
+            // 
+            // txtCodArticulo
+            // 
+            this.txtCodArticulo.Location = new System.Drawing.Point(317, 96);
+            this.txtCodArticulo.Name = "txtCodArticulo";
+            this.txtCodArticulo.Size = new System.Drawing.Size(240, 20);
+            this.txtCodArticulo.TabIndex = 3;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(317, 148);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(240, 20);
+            this.txtDescripcion.TabIndex = 5;
+            // 
+            // lbDescripcion
+            // 
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescripcion.Location = new System.Drawing.Point(209, 151);
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(84, 17);
+            this.lbDescripcion.TabIndex = 4;
+            this.lbDescripcion.Text = "Descripción:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(317, 122);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(240, 20);
+            this.txtNombre.TabIndex = 7;
+            // 
+            // lbNombre
+            // 
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.Location = new System.Drawing.Point(209, 125);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(60, 17);
+            this.lbNombre.TabIndex = 6;
+            this.lbNombre.Text = "Nombre:";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(318, 252);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(240, 20);
+            this.txtPrecio.TabIndex = 9;
+            // 
+            // lbMarca
+            // 
+            this.lbMarca.AutoSize = true;
+            this.lbMarca.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMarca.Location = new System.Drawing.Point(209, 177);
+            this.lbMarca.Name = "lbMarca";
+            this.lbMarca.Size = new System.Drawing.Size(50, 17);
+            this.lbMarca.TabIndex = 8;
+            this.lbMarca.Text = "Marca:";
+            this.lbMarca.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtImagen
+            // 
+            this.txtImagen.Location = new System.Drawing.Point(318, 226);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(240, 20);
+            this.txtImagen.TabIndex = 11;
+            // 
+            // lbCategoria
+            // 
+            this.lbCategoria.AutoSize = true;
+            this.lbCategoria.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategoria.Location = new System.Drawing.Point(209, 203);
+            this.lbCategoria.Name = "lbCategoria";
+            this.lbCategoria.Size = new System.Drawing.Size(69, 17);
+            this.lbCategoria.TabIndex = 10;
+            this.lbCategoria.Text = "Categoría:";
+            // 
+            // cboMarca
+            // 
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(317, 173);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(241, 21);
+            this.cboMarca.TabIndex = 12;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(317, 199);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(241, 21);
+            this.cboCategoria.TabIndex = 13;
+            // 
+            // lbImagen
+            // 
+            this.lbImagen.AutoSize = true;
+            this.lbImagen.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImagen.Location = new System.Drawing.Point(209, 229);
+            this.lbImagen.Name = "lbImagen";
+            this.lbImagen.Size = new System.Drawing.Size(56, 17);
+            this.lbImagen.TabIndex = 14;
+            this.lbImagen.Text = "Imagen:";
+            this.lbImagen.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lbPrecio
+            // 
+            this.lbPrecio.AutoSize = true;
+            this.lbPrecio.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrecio.Location = new System.Drawing.Point(209, 255);
+            this.lbPrecio.Name = "lbPrecio";
+            this.lbPrecio.Size = new System.Drawing.Size(50, 17);
+            this.lbPrecio.TabIndex = 15;
+            this.lbPrecio.Text = "Precio:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnAgregar.Location = new System.Drawing.Point(401, 315);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lbAgregarTitulo);
             this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.lbPrecio);
+            this.Controls.Add(this.lbImagen);
+            this.Controls.Add(this.cboCategoria);
+            this.Controls.Add(this.cboMarca);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.lbCategoria);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lbMarca);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lbNombre);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.lbDescripcion);
+            this.Controls.Add(this.txtCodArticulo);
+            this.Controls.Add(this.lbCodArticulo);
+            this.Controls.Add(this.lbAgregarTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -69,8 +225,21 @@ namespace TPWinForm
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lbAgregarTitulo;
+        private System.Windows.Forms.Label lbCodArticulo;
+        private System.Windows.Forms.TextBox txtCodArticulo;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label lbDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label lbMarca;
+        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.Label lbCategoria;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.Label lbImagen;
+        private System.Windows.Forms.Label lbPrecio;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
