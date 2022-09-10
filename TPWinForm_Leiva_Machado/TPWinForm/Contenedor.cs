@@ -17,7 +17,7 @@ namespace TPWinForm
             InitializeComponent();
             Home ventanaHome = new Home();
             ventanaHome.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaHome.Size = new Size(865, 474);
             ventanaHome.Show();
         }
 
@@ -26,7 +26,7 @@ namespace TPWinForm
             cerrarForms();
             Home ventanaHome = new Home();
             ventanaHome.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaHome.Size = new Size(865, 474);
             ventanaHome.Show();
         }
 
@@ -35,7 +35,7 @@ namespace TPWinForm
             cerrarForms();
             Listado ventanaListado = new Listado();
             ventanaListado.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaListado.Size = new Size(865, 474);
             ventanaListado.Show();
         }
 
@@ -44,7 +44,7 @@ namespace TPWinForm
             cerrarForms();
             Busqueda ventanaBusqueda = new Busqueda();
             ventanaBusqueda.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaBusqueda.Size = new Size(865, 474);
             ventanaBusqueda.Show();
         }
 
@@ -53,7 +53,7 @@ namespace TPWinForm
             cerrarForms();
             Agregar ventanaAgregar = new Agregar();
             ventanaAgregar.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaAgregar.Size = new Size(865, 474);
             ventanaAgregar.Show();
         }
 
@@ -62,7 +62,7 @@ namespace TPWinForm
             cerrarForms();
             Modificar ventanaModificar = new Modificar();
             ventanaModificar.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaModificar.Size = new Size(865, 474);
             ventanaModificar.Show();
         }
 
@@ -71,7 +71,7 @@ namespace TPWinForm
             cerrarForms();
             Eliminar ventanaEliminar = new Eliminar();
             ventanaEliminar.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaEliminar.Size = new Size(865, 474);
             ventanaEliminar.Show();
         }
 
@@ -80,7 +80,7 @@ namespace TPWinForm
             cerrarForms();
             VerDetalle ventanaVerDetalle = new VerDetalle();
             ventanaVerDetalle.MdiParent = this;
-            ventanaHome.Size = new Size(863, 472);
+            ventanaVerDetalle.Size = new Size(865, 474);
             ventanaVerDetalle.Show();
         }
 
