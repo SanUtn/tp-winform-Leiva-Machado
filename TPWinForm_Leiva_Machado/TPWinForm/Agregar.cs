@@ -48,6 +48,15 @@ namespace TPWinForm
             {
                 nuevo.CodArticulo = txtCodArticulo.Text;
                 nuevo.NombreArticulo = txtNombre.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
+                nuevo.CategoriaArticulo = (Categoria)cboCategoria.SelectedItem;
+                nuevo.UrlImagen = txtImagen.Text;
+                nuevo.Precio = float.Parse(txtPrecio.Text);
+
+                negocio.agregar(nuevo);
+
+                MessageBox.Show("Agregado exitosamente");
             }
             catch (Exception ex)
             {
