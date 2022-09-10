@@ -36,11 +36,13 @@ namespace TPWinForm
             // 
             // dataListado
             // 
+            this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataListado.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Location = new System.Drawing.Point(69, 91);
             this.dataListado.Name = "dataListado";
-            this.dataListado.Size = new System.Drawing.Size(745, 259);
+            this.dataListado.Size = new System.Drawing.Size(596, 259);
             this.dataListado.TabIndex = 0;
             // 
             // tituloListado

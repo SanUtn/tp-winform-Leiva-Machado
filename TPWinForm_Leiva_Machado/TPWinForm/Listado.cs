@@ -35,6 +35,7 @@ namespace TPWinForm
             {
                 listaArticulos = negocio.listarArticulo();
                 dataListado.DataSource = listaArticulos;
+                dataListado.Columns["UrlImagen"].Visible = false;
 
             }
             catch (Exception ex)
