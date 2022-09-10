@@ -36,7 +36,21 @@ namespace TPWinForm
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo nuevo = new Articulo();
+            try
+            {
+                nuevo.CodArticulo = txtCodArticulo.Text;
+                nuevo.NombreArticulo = txtNombre.Text;
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
         }

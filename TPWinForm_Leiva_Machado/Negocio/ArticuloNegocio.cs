@@ -17,7 +17,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Select A.Codigo, A.Nombre,A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
+                datos.setearConsulta("Select A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -25,6 +25,7 @@ namespace Negocio
                     Articulo art = new Articulo();
                     art.CodArticulo = (String)datos.Lector["Codigo"];
                     art.NombreArticulo = (String)datos.Lector["Nombre"];
+                    art.Descripcion = (String)datos.Lector["Descripcion"];
 
                     if (!(datos.Lector["ImagenUrl"] is DBNull))
                     {

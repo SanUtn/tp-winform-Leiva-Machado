@@ -11,7 +11,7 @@ namespace Dominio
         public string CodArticulo { get; set; }
 
         public string NombreArticulo { get; set; }
-
+        public string Descripcion { get; set; }
         public Marca MarcaArticulo { get; set; }
         public Categoria CategoriaArticulo { get; set; }
         public string UrlImagen { get; set; }
