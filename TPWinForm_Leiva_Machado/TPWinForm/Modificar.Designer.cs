@@ -64,7 +64,6 @@ namespace TPWinForm
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(406, 193);
             this.dataListado.TabIndex = 67;
-            //this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.SelectionChanged += new System.EventHandler(this.dataListado_SelectionChanged);
             // 
             // btnModificar
@@ -80,6 +79,7 @@ namespace TPWinForm
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lbModificarTitulo
             // 

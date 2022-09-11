@@ -17,12 +17,13 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Select A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
+                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo art = new Articulo();
+                    art.Id = (int)datos.Lector["Id"];
                     art.CodArticulo = (String)datos.Lector["Codigo"];
                     art.NombreArticulo = (String)datos.Lector["Nombre"];
                     art.Descripcion = (String)datos.Lector["Descripcion"];
@@ -103,6 +104,33 @@ namespace Negocio
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Articulo modificado)
+        {
+            try
+            {
+                datos.setearConsulta("Update Articulos set codigo = @codigo, Nombre = @nombre, descripcion = @descripcion, idmarca = @idmarca, idcategoria = @idcategoria, imagenurl = @imagen, precio = @precio where id = @id ");
+                datos.setearParametro("@codigo", modificado.CodArticulo);
+                datos.setearParametro("@nombre", modificado.NombreArticulo);
+                datos.setearParametro("@descripcion", modificado.Descripcion);
+                datos.setearParametro("@idmarca", modificado.MarcaArticulo.Id);
+                datos.setearParametro("@idcategoria", modificado.CategoriaArticulo.Id);
+                datos.setearParametro("@imagen", modificado.UrlImagen);
+                datos.setearParametro("@precio", modificado.Precio);
+                datos.setearParametro("@id", modificado.Id);
+                datos.ejecutarAccion();
+            }
+
+            catch (Exception ex)
+            {
+
                 throw ex;
             }
             finally

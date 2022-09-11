@@ -67,7 +67,6 @@ namespace TPWinForm
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
            
@@ -134,6 +133,32 @@ namespace TPWinForm
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
 
+            try
+            {
+                articulo.CodArticulo = txtCodArticuloM.Text;
+                articulo.NombreArticulo = txtNombreM.Text;
+                articulo.Descripcion = txtDescripcionM.Text;
+                articulo.MarcaArticulo = (Marca)cboMarcaM.SelectedItem;
+                articulo.CategoriaArticulo = (Categoria)cboCategoriaM.SelectedItem;
+                articulo.UrlImagen = txtImagenM.Text;
+                articulo.Precio = float.Parse(txtPrecioM.Text);
+
+                negocio.modificar(articulo);
+
+                MessageBox.Show("Modificado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                cargar();
+            }
+        }
     }
 }
