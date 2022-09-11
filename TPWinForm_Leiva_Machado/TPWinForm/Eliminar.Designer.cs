@@ -68,7 +68,7 @@ namespace TPWinForm
             this.btnEliminar.Location = new System.Drawing.Point(639, 324);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 83;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -98,7 +98,7 @@ namespace TPWinForm
             this.cboCategoriaE.Location = new System.Drawing.Point(570, 208);
             this.cboCategoriaE.Name = "cboCategoriaE";
             this.cboCategoriaE.Size = new System.Drawing.Size(241, 21);
-            this.cboCategoriaE.TabIndex = 80;
+            this.cboCategoriaE.TabIndex = 4;
             // 
             // cboMarcaE
             // 
@@ -106,14 +106,14 @@ namespace TPWinForm
             this.cboMarcaE.Location = new System.Drawing.Point(570, 182);
             this.cboMarcaE.Name = "cboMarcaE";
             this.cboMarcaE.Size = new System.Drawing.Size(241, 21);
-            this.cboMarcaE.TabIndex = 79;
+            this.cboMarcaE.TabIndex = 3;
             // 
             // txtImagenE
             // 
             this.txtImagenE.Location = new System.Drawing.Point(571, 235);
             this.txtImagenE.Name = "txtImagenE";
             this.txtImagenE.Size = new System.Drawing.Size(240, 20);
-            this.txtImagenE.TabIndex = 78;
+            this.txtImagenE.TabIndex = 5;
             // 
             // lbCategoriaE
             // 
@@ -130,7 +130,7 @@ namespace TPWinForm
             this.txtPrecioE.Location = new System.Drawing.Point(571, 261);
             this.txtPrecioE.Name = "txtPrecioE";
             this.txtPrecioE.Size = new System.Drawing.Size(240, 20);
-            this.txtPrecioE.TabIndex = 76;
+            this.txtPrecioE.TabIndex = 6;
             // 
             // lbMarcaE
             // 
@@ -147,7 +147,7 @@ namespace TPWinForm
             this.txtNombreE.Location = new System.Drawing.Point(570, 131);
             this.txtNombreE.Name = "txtNombreE";
             this.txtNombreE.Size = new System.Drawing.Size(240, 20);
-            this.txtNombreE.TabIndex = 74;
+            this.txtNombreE.TabIndex = 1;
             // 
             // lbNombreE
             // 
@@ -164,7 +164,7 @@ namespace TPWinForm
             this.txtDescripcionE.Location = new System.Drawing.Point(570, 157);
             this.txtDescripcionE.Name = "txtDescripcionE";
             this.txtDescripcionE.Size = new System.Drawing.Size(240, 20);
-            this.txtDescripcionE.TabIndex = 72;
+            this.txtDescripcionE.TabIndex = 2;
             // 
             // lbDescripcionE
             // 
@@ -181,7 +181,7 @@ namespace TPWinForm
             this.txtCodArticuloE.Location = new System.Drawing.Point(570, 105);
             this.txtCodArticuloE.Name = "txtCodArticuloE";
             this.txtCodArticuloE.Size = new System.Drawing.Size(240, 20);
-            this.txtCodArticuloE.TabIndex = 70;
+            this.txtCodArticuloE.TabIndex = 0;
             // 
             // lbCodArticuloE
             // 

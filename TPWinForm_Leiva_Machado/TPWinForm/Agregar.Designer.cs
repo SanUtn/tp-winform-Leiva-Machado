@@ -72,14 +72,14 @@ namespace TPWinForm
             this.txtCodArticulo.Location = new System.Drawing.Point(317, 96);
             this.txtCodArticulo.Name = "txtCodArticulo";
             this.txtCodArticulo.Size = new System.Drawing.Size(240, 20);
-            this.txtCodArticulo.TabIndex = 3;
+            this.txtCodArticulo.TabIndex = 0;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(317, 148);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(240, 20);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // lbDescripcion
             // 
@@ -96,7 +96,7 @@ namespace TPWinForm
             this.txtNombre.Location = new System.Drawing.Point(317, 122);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(240, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // lbNombre
             // 
@@ -113,7 +113,7 @@ namespace TPWinForm
             this.txtPrecio.Location = new System.Drawing.Point(318, 252);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(240, 20);
-            this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.TabIndex = 6;
             // 
             // lbMarca
             // 
@@ -130,7 +130,7 @@ namespace TPWinForm
             this.txtImagen.Location = new System.Drawing.Point(318, 226);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(240, 20);
-            this.txtImagen.TabIndex = 11;
+            this.txtImagen.TabIndex = 5;
             // 
             // lbCategoria
             // 
@@ -149,7 +149,7 @@ namespace TPWinForm
             this.cboMarca.Location = new System.Drawing.Point(317, 173);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(241, 21);
-            this.cboMarca.TabIndex = 12;
+            this.cboMarca.TabIndex = 3;
             // 
             // cboCategoria
             // 
@@ -158,7 +158,7 @@ namespace TPWinForm
             this.cboCategoria.Location = new System.Drawing.Point(317, 199);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(241, 21);
-            this.cboCategoria.TabIndex = 13;
+            this.cboCategoria.TabIndex = 4;
             // 
             // lbImagen
             // 
@@ -190,7 +190,7 @@ namespace TPWinForm
             this.btnAgregar.Location = new System.Drawing.Point(401, 315);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);

@@ -68,7 +68,7 @@ namespace TPWinForm
             this.btnModificar.Location = new System.Drawing.Point(652, 324);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 66;
+            this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
@@ -98,7 +98,7 @@ namespace TPWinForm
             this.cboCategoriaM.Location = new System.Drawing.Point(568, 208);
             this.cboCategoriaM.Name = "cboCategoriaM";
             this.cboCategoriaM.Size = new System.Drawing.Size(241, 21);
-            this.cboCategoriaM.TabIndex = 63;
+            this.cboCategoriaM.TabIndex = 4;
             // 
             // cboMarcaM
             // 
@@ -106,14 +106,14 @@ namespace TPWinForm
             this.cboMarcaM.Location = new System.Drawing.Point(568, 182);
             this.cboMarcaM.Name = "cboMarcaM";
             this.cboMarcaM.Size = new System.Drawing.Size(241, 21);
-            this.cboMarcaM.TabIndex = 62;
+            this.cboMarcaM.TabIndex = 3;
             // 
             // txtImagenM
             // 
             this.txtImagenM.Location = new System.Drawing.Point(569, 235);
             this.txtImagenM.Name = "txtImagenM";
             this.txtImagenM.Size = new System.Drawing.Size(240, 20);
-            this.txtImagenM.TabIndex = 61;
+            this.txtImagenM.TabIndex = 5;
             // 
             // lbCategoriaM
             // 
@@ -130,7 +130,7 @@ namespace TPWinForm
             this.txtPrecioM.Location = new System.Drawing.Point(569, 261);
             this.txtPrecioM.Name = "txtPrecioM";
             this.txtPrecioM.Size = new System.Drawing.Size(240, 20);
-            this.txtPrecioM.TabIndex = 59;
+            this.txtPrecioM.TabIndex = 6;
             // 
             // lbMarcaM
             // 
@@ -147,7 +147,7 @@ namespace TPWinForm
             this.txtNombreM.Location = new System.Drawing.Point(568, 131);
             this.txtNombreM.Name = "txtNombreM";
             this.txtNombreM.Size = new System.Drawing.Size(240, 20);
-            this.txtNombreM.TabIndex = 57;
+            this.txtNombreM.TabIndex = 1;
             // 
             // lbNombreM
             // 
@@ -164,7 +164,7 @@ namespace TPWinForm
             this.txtDescripcionM.Location = new System.Drawing.Point(568, 157);
             this.txtDescripcionM.Name = "txtDescripcionM";
             this.txtDescripcionM.Size = new System.Drawing.Size(240, 20);
-            this.txtDescripcionM.TabIndex = 55;
+            this.txtDescripcionM.TabIndex = 2;
             // 
             // lbDescripcionM
             // 
@@ -181,7 +181,7 @@ namespace TPWinForm
             this.txtCodArticuloM.Location = new System.Drawing.Point(568, 105);
             this.txtCodArticuloM.Name = "txtCodArticuloM";
             this.txtCodArticuloM.Size = new System.Drawing.Size(240, 20);
-            this.txtCodArticuloM.TabIndex = 53;
+            this.txtCodArticuloM.TabIndex = 0;
             // 
             // lbCodArticuloM
             // 
