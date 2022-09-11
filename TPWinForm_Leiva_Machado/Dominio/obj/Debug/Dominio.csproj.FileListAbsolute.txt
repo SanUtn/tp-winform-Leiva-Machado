@@ -4,3 +4,9 @@ E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiv
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.dll
 E:\Practicas\Facultad\PROG3\Proyecto ABM\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\bin\Debug\Dominio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-winform-Leiva-Machado\TPWinForm_Leiva_Machado\Dominio\obj\Debug\Dominio.pdb

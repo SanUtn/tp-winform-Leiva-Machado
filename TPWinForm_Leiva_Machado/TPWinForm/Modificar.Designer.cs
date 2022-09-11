@@ -46,7 +46,9 @@ namespace TPWinForm
             this.txtCodArticuloM = new System.Windows.Forms.TextBox();
             this.lbCodArticuloM = new System.Windows.Forms.Label();
             this.lbModificarTitulo = new System.Windows.Forms.Label();
+            this.pbModificar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             this.SuspendLayout();
             // 
             // dataListado
@@ -58,8 +60,9 @@ namespace TPWinForm
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(406, 259);
+            this.dataListado.Size = new System.Drawing.Size(406, 193);
             this.dataListado.TabIndex = 67;
+            this.dataListado.SelectionChanged += new System.EventHandler(this.dataListado_SelectionChanged);
             // 
             // btnModificar
             // 
@@ -206,11 +209,21 @@ namespace TPWinForm
             this.lbModificarTitulo.TabIndex = 51;
             this.lbModificarTitulo.Text = "Modificar Artículo";
             // 
+            // pbModificar
+            // 
+            this.pbModificar.Location = new System.Drawing.Point(151, 298);
+            this.pbModificar.Name = "pbModificar";
+            this.pbModificar.Size = new System.Drawing.Size(148, 115);
+            this.pbModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbModificar.TabIndex = 68;
+            this.pbModificar.TabStop = false;
+            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbModificar);
             this.Controls.Add(this.dataListado);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.lbPrecioM);
@@ -234,6 +247,7 @@ namespace TPWinForm
             this.Text = "Modificar";
             this.Load += new System.EventHandler(this.Modificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +272,6 @@ namespace TPWinForm
         private System.Windows.Forms.TextBox txtCodArticuloM;
         private System.Windows.Forms.Label lbCodArticuloM;
         private System.Windows.Forms.Label lbModificarTitulo;
+        private System.Windows.Forms.PictureBox pbModificar;
     }
 }
