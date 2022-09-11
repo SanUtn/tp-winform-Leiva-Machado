@@ -34,6 +34,7 @@ namespace TPWinForm
                 if(dgvBusqueda.Rows.Count != 0)
                 {
                     dgvBusqueda.Show(); //muestro el grid
+                    dgvBusqueda.Columns["Id"].Visible = false;
                     dgvBusqueda.Columns["CodArticulo"].Visible = false;
                     dgvBusqueda.Columns["Descripcion"].Visible = false;
                     dgvBusqueda.Columns["MarcaArticulo"].Visible = false;

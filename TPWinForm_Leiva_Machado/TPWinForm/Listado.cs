@@ -35,6 +35,7 @@ namespace TPWinForm
             {
                 listaArticulos = negocio.listarArticulo();
                 dataListado.DataSource = listaArticulos;
+               // dataListado.Columns["Id"].Visible = false; <- esto pincha
                 dataListado.Columns["UrlImagen"].Visible = false;
                 cargarImagen(listaArticulos.First().UrlImagen);
             }
