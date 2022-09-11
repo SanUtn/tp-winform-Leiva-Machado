@@ -46,7 +46,9 @@ namespace TPWinForm
             this.txtCodArticuloE = new System.Windows.Forms.TextBox();
             this.lbCodArticuloE = new System.Windows.Forms.Label();
             this.lbEliminarTitulo = new System.Windows.Forms.Label();
+            this.pbEliminar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // dataListado
@@ -58,8 +60,9 @@ namespace TPWinForm
             this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(406, 259);
+            this.dataListado.Size = new System.Drawing.Size(406, 204);
             this.dataListado.TabIndex = 84;
+            this.dataListado.SelectionChanged += new System.EventHandler(this.dataListado_SelectionChanged);
             // 
             // btnEliminar
             // 
@@ -206,11 +209,21 @@ namespace TPWinForm
             this.lbEliminarTitulo.TabIndex = 68;
             this.lbEliminarTitulo.Text = "Eliminar Artículo";
             // 
+            // pbEliminar
+            // 
+            this.pbEliminar.Location = new System.Drawing.Point(172, 311);
+            this.pbEliminar.Name = "pbEliminar";
+            this.pbEliminar.Size = new System.Drawing.Size(148, 115);
+            this.pbEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEliminar.TabIndex = 85;
+            this.pbEliminar.TabStop = false;
+            // 
             // Eliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 468);
+            this.Controls.Add(this.pbEliminar);
             this.Controls.Add(this.dataListado);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lbPrecioE);
@@ -232,7 +245,9 @@ namespace TPWinForm
             this.Name = "Eliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
+            this.Load += new System.EventHandler(this.Eliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +271,6 @@ namespace TPWinForm
         private System.Windows.Forms.TextBox txtCodArticuloE;
         private System.Windows.Forms.Label lbCodArticuloE;
         private System.Windows.Forms.Label lbEliminarTitulo;
+        private System.Windows.Forms.PictureBox pbEliminar;
     }
 }

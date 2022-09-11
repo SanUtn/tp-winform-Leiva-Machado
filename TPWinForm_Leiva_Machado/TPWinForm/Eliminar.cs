@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dominio;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,89 +19,45 @@ namespace TPWinForm
             InitializeComponent();
         }
 
-        private void lbModificarTitulo_Click(object sender, EventArgs e)
+        private void Eliminar_Load(object sender, EventArgs e)
         {
-
+            cargar();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        public void cargar()
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> listaArticulos;
+            try
+            {
+                listaArticulos = negocio.listarArticulo();
+                dataListado.DataSource = listaArticulos;
+                dataListado.Columns["UrlImagen"].Visible = false;
+                cargarImagen(listaArticulos.First().UrlImagen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void lbPrecioM_Click(object sender, EventArgs e)
+        private void cargarImagen(string imagen)
         {
+            try
+            {
+                pbEliminar.Load(imagen);
+            }
+            catch (Exception ex)
+            {
 
+                pbEliminar.Load("https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png");
+            }
         }
 
-        private void lbImagenM_Click(object sender, EventArgs e)
+        private void dataListado_SelectionChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void cboCategoriaM_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboMarcaM_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtImagenM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCategoriaM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrecioM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbMarcaM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbNombreM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescripcionM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbDescripcionM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodArticuloM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCodArticuloM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+            cargarImagen(articuloSeleccionado.UrlImagen);
         }
     }
 }
