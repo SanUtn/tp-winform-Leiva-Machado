@@ -30,13 +30,47 @@ namespace TPWinForm
         private void Modificar_Load(object sender, EventArgs e)
         {
             cargar();
-            if (articulo != null)
+            //if (articulo != null)
+            //{
+            //    txtCodArticuloM.Text = articulo.CodArticulo;
+            //    txtNombreM.Text = articulo.NombreArticulo;
+            //    txtDescripcionM.Text = articulo.Descripcion;
+            //}
+            articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
+            cargarFormulario(articulo);
+
+        }
+
+        public void cargarFormulario(Articulo art)
+        {
+
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
             {
-                txtCodArticuloM.Text = articulo.CodArticulo;
-                txtNombreM.Text = articulo.NombreArticulo;
-                txtDescripcionM.Text = articulo.Descripcion;
-                
+                txtCodArticuloM.Text = art.CodArticulo;
+                txtNombreM.Text = art.NombreArticulo;
+                txtDescripcionM.Text = art.Descripcion;
+
+                cboMarcaM.DataSource = marcaNegocio.listarMarca();
+                cboMarcaM.ValueMember = "Id"; //nombres de las propiedades de la clase elemento
+                cboMarcaM.DisplayMember = "NombreMarca";
+                cboMarcaM.SelectedValue = art.MarcaArticulo.Id;
+
+                cboCategoriaM.DataSource = categoriaNegocio.listarCategoria();
+                cboCategoriaM.ValueMember = "Id";
+                cboCategoriaM.DisplayMember = "NombreCategoria";
+                cboCategoriaM.SelectedValue = art.CategoriaArticulo.Id;
+
+                txtImagenM.Text = art.UrlImagen;
+                txtPrecioM.Text = art.Precio.ToString();
             }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+           
         }
 
         public void cargar()
@@ -72,22 +106,21 @@ namespace TPWinForm
 
         private void dataListado_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cargarImagen(articuloSeleccionado.UrlImagen);
+            articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
+            cargarFormulario(articulo);
+            cargarImagen(articulo.UrlImagen);
         }
 
-        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cerrarForms();
-            Modificar modificar = new Modificar(seleccionado);
-            //modificar.MdiParent = this;
-            modificar.Size = new Size(865, 474);
-            modificar.Show();
-         
-
-        }
+        //private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    Articulo seleccionado;
+        //    seleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+        //    cerrarForms();
+        //    Modificar modificar = new Modificar(seleccionado);
+        //    //modificar.MdiParent = this;
+        //    modificar.Size = new Size(865, 474);
+        //    modificar.Show();
+        //}
 
         void cerrarForms()
         {
