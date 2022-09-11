@@ -53,8 +53,11 @@ namespace TPWinForm
             // 
             this.dataListado.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListado.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataListado.Location = new System.Drawing.Point(31, 88);
+            this.dataListado.MultiSelect = false;
             this.dataListado.Name = "dataListado";
+            this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(406, 259);
             this.dataListado.TabIndex = 84;
             // 
