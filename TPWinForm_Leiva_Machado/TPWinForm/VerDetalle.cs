@@ -40,7 +40,7 @@ namespace TPWinForm
                     pic.AccessibleName = aux.NombreArticulo;
                     cargarImagen(pic, aux.UrlImagen);
                     x += 100;
-                    pic.Click += new EventHandler(saludar);
+                    pic.Click += new EventHandler(visualizarDetalle);
                     this.Controls.Add(pic);
                 }
                 Control[] pictures = this.Controls.Find("picBicicleta", false);
@@ -53,14 +53,14 @@ namespace TPWinForm
             
         }
 
-        private void saludar(object sender, EventArgs e)
+        private void visualizarDetalle(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
             string name = pb.AccessibleName;
 
-            Articulo aux = (Articulo)listaArticulos.Where(x => (x.NombreArticulo == name));
-
-            MessageBox.Show(aux.NombreArticulo);
+            Articulo aux = listaArticulos.Where(x => x.NombreArticulo == name).FirstOrDefault();
+            Detalle detalle = new Detalle(aux);
+            detalle.ShowDialog();
         }
 
         private void picNombreArticulo(object sender, EventArgs e)
