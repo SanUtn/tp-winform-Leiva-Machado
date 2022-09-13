@@ -14,6 +14,7 @@ namespace TPWinForm
 {
     public partial class VerDetalle : Form
     {
+        private List<Articulo> listaArticulos;
         public VerDetalle()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace TPWinForm
         private void VerDetalle_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> listaArticulos;
+            
             try
             {
                 listaArticulos = negocio.listarArticulo();
@@ -36,9 +37,10 @@ namespace TPWinForm
                     pic.Name = "pic" + aux.NombreArticulo;
                     pic.Size = new Size(100, 100);
                     pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pic.AccessibleName = aux.NombreArticulo;
                     cargarImagen(pic, aux.UrlImagen);
-                    //pic.ImageLocation = aux.UrlImagen;
                     x += 100;
+                    pic.Click += new EventHandler(saludar);
                     this.Controls.Add(pic);
                 }
                 Control[] pictures = this.Controls.Find("picBicicleta", false);
@@ -49,6 +51,16 @@ namespace TPWinForm
                 MessageBox.Show(ex.ToString());
             }
             
+        }
+
+        private void saludar(object sender, EventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+            string name = pb.AccessibleName;
+
+            Articulo aux = (Articulo)listaArticulos.Where(x => (x.NombreArticulo == name));
+
+            MessageBox.Show(aux.NombreArticulo);
         }
 
         private void picNombreArticulo(object sender, EventArgs e)
