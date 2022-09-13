@@ -59,5 +59,33 @@ namespace TPWinForm
             Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
             cargarImagen(articuloSeleccionado.UrlImagen);
         }
+
+        private void eliminar(bool logico = false)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Seguro que queres eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); //retorna un valor
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+
+                    MessageBox.Show("Eliminado correctamente");
+                    cargar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
     }
 }
