@@ -19,17 +19,53 @@ namespace TPWinForm
             InitializeComponent();
         }
 
+        //private void btnBusqueda_Click(object sender, EventArgs e)
+        //{
+        //    ArticuloNegocio negocio = new ArticuloNegocio();
+        //    Articulo buscado = new Articulo();
+        //    buscado.NombreArticulo = txbBusqueda.Text;
+
+        //    List<Articulo> listaArticulosEncontrados;
+
+        //    try
+        //    {
+        //        listaArticulosEncontrados = negocio.buscarArticulo(buscado);
+        //        dgvBusqueda.DataSource = listaArticulosEncontrados;
+        //        if(dgvBusqueda.Rows.Count != 0)
+        //        {
+        //            dgvBusqueda.Show(); //muestro el grid
+        //            dgvBusqueda.Columns["Id"].Visible = false;
+        //            dgvBusqueda.Columns["CodArticulo"].Visible = false;
+        //            dgvBusqueda.Columns["Descripcion"].Visible = false;
+        //            dgvBusqueda.Columns["MarcaArticulo"].Visible = false;
+        //            dgvBusqueda.Columns["CategoriaArticulo"].Visible = false;
+        //            dgvBusqueda.Columns["UrlImagen"].Visible = false;
+        //            dgvBusqueda.Columns["Precio"].Visible = false;
+        //            cargarImagen(listaArticulosEncontrados.First().UrlImagen);
+        //        }
+        //        else
+        //        {
+        //            //sino oculto y mensaje sin resultados
+        //            ocultarComponentes();
+        //            MessageBox.Show("Sin resultados");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.ToString());
+        //    }
+        //}
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            Articulo buscado = new Articulo();
-            buscado.NombreArticulo = txbBusqueda.Text;
-
+            string campo = cboCampo.SelectedItem.ToString();
+            string criterio = cboCriterio.SelectedItem.ToString();
+            string filtro = txbBusqueda.Text;
             List<Articulo> listaArticulosEncontrados;
 
             try
             {
-                listaArticulosEncontrados = negocio.buscarArticulo(buscado);
+                listaArticulosEncontrados = negocio.filtrar(campo,criterio,filtro);
                 dgvBusqueda.DataSource = listaArticulosEncontrados;
                 if(dgvBusqueda.Rows.Count != 0)
                 {
@@ -52,10 +88,10 @@ namespace TPWinForm
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void cargarImagen(string imagen)
         {
             pbBusqueda.Show();
@@ -100,7 +136,7 @@ namespace TPWinForm
             {
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Mayor a");
-                cboCriterio.Items.Add("Menos a");
+                cboCriterio.Items.Add("Menor a");
                 cboCriterio.Items.Add("Igual a");
             }
             else
