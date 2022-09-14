@@ -28,5 +28,6 @@ namespace Dominio
         public string UrlImagen { get; set; }
 
         public float Precio { get; set; }
+
     }
 }

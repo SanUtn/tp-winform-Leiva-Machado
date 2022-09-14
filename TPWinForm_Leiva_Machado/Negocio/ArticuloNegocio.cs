@@ -17,7 +17,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio  from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca");
+                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca where A.Activo = 1");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -40,6 +40,7 @@ namespace Negocio
                     art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                     art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
                     art.Precio = (float)(decimal)datos.Lector["Precio"]; //hay que revisar esto
+               
 
                     lista.Add(art);
                 }

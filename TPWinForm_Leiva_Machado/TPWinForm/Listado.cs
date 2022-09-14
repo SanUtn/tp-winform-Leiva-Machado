@@ -35,7 +35,7 @@ namespace TPWinForm
             {
                 listaArticulos = negocio.listarArticulo();
                 dataListado.DataSource = listaArticulos;
-               // dataListado.Columns["Id"].Visible = false; <- esto pincha
+                dataListado.Columns["Id"].Visible = false;
                 dataListado.Columns["UrlImagen"].Visible = false;
                 cargarImagen(listaArticulos.First().UrlImagen);
             }
@@ -60,8 +60,11 @@ namespace TPWinForm
 
         private void dataListado_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cargarImagen(articuloSeleccionado.UrlImagen);
+            if (dataListado.CurrentRow != null)//para que no rompa si no seleccione nada
+            {
+                Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarImagen(articuloSeleccionado.UrlImagen);
+            }
         }
     }
 }

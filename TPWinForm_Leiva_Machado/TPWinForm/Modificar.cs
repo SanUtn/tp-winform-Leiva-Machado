@@ -36,9 +36,11 @@ namespace TPWinForm
             //    txtNombreM.Text = articulo.NombreArticulo;
             //    txtDescripcionM.Text = articulo.Descripcion;
             //}
-            articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cargarFormulario(articulo);
-
+            if (dataListado.CurrentRow != null)//para que no rompa si no seleccione nada
+            {
+                articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarFormulario(articulo);
+            }
         }
 
         public void cargarFormulario(Articulo art)
@@ -80,6 +82,7 @@ namespace TPWinForm
             {
                 listaArticulos = negocio.listarArticulo();
                 dataListado.DataSource = listaArticulos;
+                dataListado.Columns["Id"].Visible = false;
                 dataListado.Columns["UrlImagen"].Visible = false;
                 cargarImagen(listaArticulos.First().UrlImagen);
 
@@ -105,9 +108,12 @@ namespace TPWinForm
 
         private void dataListado_SelectionChanged(object sender, EventArgs e)
         {
-            articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cargarFormulario(articulo);
-            cargarImagen(articulo.UrlImagen);
+            if (dataListado.CurrentRow != null)//para que no rompa si no seleccione nada
+            { 
+                articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarFormulario(articulo);
+                cargarImagen(articulo.UrlImagen);
+            }
         }
 
         //private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
