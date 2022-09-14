@@ -55,6 +55,8 @@ namespace TPWinForm
         //        MessageBox.Show(ex.ToString());
         //    }
         //}
+
+
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();

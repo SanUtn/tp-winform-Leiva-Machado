@@ -38,30 +38,32 @@ namespace TPWinForm
             this.lbCriterio = new System.Windows.Forms.Label();
             this.cboCampo = new System.Windows.Forms.ComboBox();
             this.cboCriterio = new System.Windows.Forms.ComboBox();
-            this.lbFiltro = new System.Windows.Forms.Label();
+            this.txtFiltroRapido = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // txbBusqueda
             // 
-            this.txbBusqueda.Location = new System.Drawing.Point(134, 192);
+            this.txbBusqueda.BackColor = System.Drawing.SystemColors.Menu;
+            this.txbBusqueda.Location = new System.Drawing.Point(474, 147);
             this.txbBusqueda.Name = "txbBusqueda";
-            this.txbBusqueda.Size = new System.Drawing.Size(236, 20);
+            this.txbBusqueda.Size = new System.Drawing.Size(88, 20);
             this.txbBusqueda.TabIndex = 0;
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnBusqueda.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusqueda.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnBusqueda.Location = new System.Drawing.Point(396, 192);
+            this.btnBusqueda.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnBusqueda.Location = new System.Drawing.Point(582, 144);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
             this.btnBusqueda.TabIndex = 1;
-            this.btnBusqueda.Text = "Buscar";
+            this.btnBusqueda.Text = "Filtrar";
             this.btnBusqueda.UseVisualStyleBackColor = false;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
@@ -78,18 +80,19 @@ namespace TPWinForm
             // dgvBusqueda
             // 
             this.dgvBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBusqueda.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusqueda.Location = new System.Drawing.Point(151, 260);
+            this.dgvBusqueda.Location = new System.Drawing.Point(51, 202);
             this.dgvBusqueda.Name = "dgvBusqueda";
-            this.dgvBusqueda.Size = new System.Drawing.Size(240, 150);
+            this.dgvBusqueda.Size = new System.Drawing.Size(444, 204);
             this.dgvBusqueda.TabIndex = 3;
             this.dgvBusqueda.SelectionChanged += new System.EventHandler(this.dgvBusqueda_SelectionChanged);
             // 
             // pbBusqueda
             // 
-            this.pbBusqueda.Location = new System.Drawing.Point(537, 277);
+            this.pbBusqueda.Location = new System.Drawing.Point(569, 222);
             this.pbBusqueda.Name = "pbBusqueda";
-            this.pbBusqueda.Size = new System.Drawing.Size(100, 92);
+            this.pbBusqueda.Size = new System.Drawing.Size(219, 172);
             this.pbBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBusqueda.TabIndex = 4;
             this.pbBusqueda.TabStop = false;
@@ -97,7 +100,7 @@ namespace TPWinForm
             // lbCampo
             // 
             this.lbCampo.AutoSize = true;
-            this.lbCampo.Location = new System.Drawing.Point(64, 146);
+            this.lbCampo.Location = new System.Drawing.Point(106, 157);
             this.lbCampo.Name = "lbCampo";
             this.lbCampo.Size = new System.Drawing.Size(43, 13);
             this.lbCampo.TabIndex = 5;
@@ -106,7 +109,7 @@ namespace TPWinForm
             // lbCriterio
             // 
             this.lbCriterio.AutoSize = true;
-            this.lbCriterio.Location = new System.Drawing.Point(282, 146);
+            this.lbCriterio.Location = new System.Drawing.Point(289, 157);
             this.lbCriterio.Name = "lbCriterio";
             this.lbCriterio.Size = new System.Drawing.Size(42, 13);
             this.lbCriterio.TabIndex = 6;
@@ -116,7 +119,7 @@ namespace TPWinForm
             // 
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(134, 146);
+            this.cboCampo.Location = new System.Drawing.Point(155, 147);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
             this.cboCampo.TabIndex = 7;
@@ -126,27 +129,39 @@ namespace TPWinForm
             // 
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(351, 146);
+            this.cboCriterio.Location = new System.Drawing.Point(337, 147);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(121, 21);
             this.cboCriterio.TabIndex = 8;
             // 
-            // lbFiltro
+            // txtFiltroRapido
             // 
-            this.lbFiltro.AutoSize = true;
-            this.lbFiltro.Location = new System.Drawing.Point(75, 192);
-            this.lbFiltro.Name = "lbFiltro";
-            this.lbFiltro.Size = new System.Drawing.Size(32, 13);
-            this.lbFiltro.TabIndex = 9;
-            this.lbFiltro.Text = "Filtro:";
-            this.lbFiltro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtFiltroRapido.Location = new System.Drawing.Point(241, 100);
+            this.txtFiltroRapido.Name = "txtFiltroRapido";
+            this.txtFiltroRapido.Size = new System.Drawing.Size(264, 20);
+            this.txtFiltroRapido.TabIndex = 9;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnBuscar.Location = new System.Drawing.Point(524, 97);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lbFiltro);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtFiltroRapido);
             this.Controls.Add(this.cboCriterio);
             this.Controls.Add(this.cboCampo);
             this.Controls.Add(this.lbCriterio);
@@ -179,6 +194,7 @@ namespace TPWinForm
         private System.Windows.Forms.Label lbCriterio;
         private System.Windows.Forms.ComboBox cboCampo;
         private System.Windows.Forms.ComboBox cboCriterio;
-        private System.Windows.Forms.Label lbFiltro;
+        private System.Windows.Forms.TextBox txtFiltroRapido;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
