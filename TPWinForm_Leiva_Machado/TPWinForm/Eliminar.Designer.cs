@@ -33,6 +33,7 @@ namespace TPWinForm
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lbEliminarTitulo = new System.Windows.Forms.Label();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
+            this.btnEliminarLogico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             this.SuspendLayout();
@@ -57,11 +58,11 @@ namespace TPWinForm
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnEliminar.Location = new System.Drawing.Point(546, 280);
+            this.btnEliminar.Location = new System.Drawing.Point(515, 280);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(148, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(104, 23);
             this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Eliminar Fisico";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -84,11 +85,27 @@ namespace TPWinForm
             this.pbEliminar.TabIndex = 85;
             this.pbEliminar.TabStop = false;
             // 
+            // btnEliminarLogico
+            // 
+            this.btnEliminarLogico.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnEliminarLogico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminarLogico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarLogico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarLogico.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnEliminarLogico.Location = new System.Drawing.Point(625, 280);
+            this.btnEliminarLogico.Name = "btnEliminarLogico";
+            this.btnEliminarLogico.Size = new System.Drawing.Size(104, 23);
+            this.btnEliminarLogico.TabIndex = 86;
+            this.btnEliminarLogico.Text = "Eliminar Logico";
+            this.btnEliminarLogico.UseVisualStyleBackColor = false;
+            this.btnEliminarLogico.Click += new System.EventHandler(this.btnEliminarLogico_Click);
+            // 
             // Eliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 468);
+            this.Controls.Add(this.btnEliminarLogico);
             this.Controls.Add(this.pbEliminar);
             this.Controls.Add(this.dataListado);
             this.Controls.Add(this.btnEliminar);
@@ -110,5 +127,6 @@ namespace TPWinForm
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lbEliminarTitulo;
         private System.Windows.Forms.PictureBox pbEliminar;
+        private System.Windows.Forms.Button btnEliminarLogico;
     }
 }

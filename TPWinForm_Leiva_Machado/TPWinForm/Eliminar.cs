@@ -56,8 +56,11 @@ namespace TPWinForm
 
         private void dataListado_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
-            cargarImagen(articuloSeleccionado.UrlImagen);
+            if (dataListado.CurrentRow != null)
+            {
+                Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarImagen(articuloSeleccionado.UrlImagen);
+            }
         }
 
         private void eliminar(bool logico = false)
@@ -70,7 +73,10 @@ namespace TPWinForm
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionado.Id);
+                    if (logico)
+                        negocio.eliminarLogico(seleccionado.Id);
+                    else
+                        negocio.eliminar(seleccionado.Id);
 
                     MessageBox.Show("Eliminado correctamente");
                     cargar();
@@ -86,6 +92,11 @@ namespace TPWinForm
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             eliminar();
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
         }
     }
 }
