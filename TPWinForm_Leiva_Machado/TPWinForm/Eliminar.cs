@@ -14,14 +14,22 @@ namespace TPWinForm
 {
     public partial class Eliminar : Form
     {
+        private Articulo articulo;
+
         public Eliminar()
         {
             InitializeComponent();
         }
 
+      
         private void Eliminar_Load(object sender, EventArgs e)
         {
             cargar();
+            if (dataListado.CurrentRow != null)//para que no rompa si no seleccione nada
+            {
+                articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarFormulario(articulo);
+            }
         }
 
         public void cargar()
@@ -59,6 +67,7 @@ namespace TPWinForm
             if (dataListado.CurrentRow != null)
             {
                 Articulo articuloSeleccionado = (Articulo)dataListado.CurrentRow.DataBoundItem;
+                cargarFormulario(articuloSeleccionado);
                 cargarImagen(articuloSeleccionado.UrlImagen);
             }
         }
@@ -97,6 +106,28 @@ namespace TPWinForm
         private void btnEliminarLogico_Click(object sender, EventArgs e)
         {
             eliminar(true);
+        }
+
+        public void cargarFormulario(Articulo art)
+        {
+
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                txtCodArticuloE.Text = art.CodArticulo;
+                txtNombreE.Text = art.NombreArticulo;
+                txtDescripcionE.Text = art.Descripcion;
+                txtMarcaE.Text = art.MarcaArticulo.NombreMarca;
+                txtCategoriaE.Text = art.CategoriaArticulo.NombreCategoria;
+                txtImagenE.Text = art.UrlImagen;
+                txtPrecioE.Text = art.Precio.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
