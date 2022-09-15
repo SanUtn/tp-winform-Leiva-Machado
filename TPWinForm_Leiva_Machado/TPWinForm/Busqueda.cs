@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using Helper;
 
 namespace TPWinForm
 {
     public partial class Busqueda : Form
     {
         private List<Articulo> listaArticulos;
+        private MetodosCompartidos helper = new MetodosCompartidos();
+
         public Busqueda()
         {
             InitializeComponent();
@@ -48,6 +51,7 @@ namespace TPWinForm
 
             try
             {
+                if (validarFiltro()) { return; }
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txbBusqueda.Text;
@@ -175,6 +179,43 @@ namespace TPWinForm
             ocultarColumnas();
             dgvBusqueda.Show();
             
+        }
+
+        private bool validarFiltro()
+        {
+            if (cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione el campo para filtrar");
+                return true;
+            }
+            if (cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione el criterio para filtrar");
+                return true;
+            }
+
+            if (cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(txbBusqueda.Text))
+                {
+                    MessageBox.Show("Cargar precio a filtrar..");
+                    return true;
+                }
+                if (!(helper.soloNumeros(txbBusqueda.Text)))
+                {
+                    MessageBox.Show("Solo nros...");
+                    return true;
+                }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txbBusqueda.Text))
+                {
+                    MessageBox.Show("Indicar un valor..");
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

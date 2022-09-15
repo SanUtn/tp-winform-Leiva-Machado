@@ -10,22 +10,15 @@ namespace Helper
 {
     public class MetodosCompartidos
     {
-        
-
-       /* public void cargar()
+        public bool soloNumeros(string cadena)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> listaArticulos;
-            try
+            foreach (char caracter in cadena)
             {
-                listaArticulos = negocio.listarArticulo();
-                dataListado.DataSource = listaArticulos;
+                if (!(char.IsNumber(caracter))) return false;
+            }
+            return true;
+        }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }*/
+
     }
 }
