@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria INNER JOIN Marcas M ON M.id = A.IdMarca where A.Activo = 1");
+                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN Marcas M ON A.IdMarca = M.id where A.Activo = 1");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -58,7 +58,7 @@ namespace Negocio
             }
         }
 
-        public List<Articulo> buscarArticulo(Articulo buscado)
+        /*public List<Articulo> buscarArticulo(Articulo buscado)
         {
             List<Articulo> encontrados = new List<Articulo>();
             try
@@ -88,7 +88,7 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-        }
+        }*/
 
         public void agregar(Articulo nuevo)
         {
@@ -181,11 +181,11 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = "SELECT A.Nombre, A.ImagenUrl FROM ARTICULOS A ";
+                string consulta = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN Marcas M ON A.IdMarca = M.id where A.Activo = 1 and";
 
                 if (campo == "Precio")
                 {
-                    consulta += "WHERE ";
+                   // consulta += "WHERE ";
                     switch (criterio)
                     {
                         case "Mayor a":
@@ -201,7 +201,7 @@ namespace Negocio
                 }
                 else if (campo == "Nombre")
                 {
-                    consulta += "WHERE ";
+                    //consulta += "WHERE ";
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -217,7 +217,7 @@ namespace Negocio
                 }
                 else
                 {
-                    consulta += "LEFT JOIN Categorias C ON C.ID = A.IdCategoria WHERE";
+                    //consulta += "LEFT JOIN Categorias C ON C.ID = A.IdCategoria WHERE";
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -239,11 +239,21 @@ namespace Negocio
                 while (datos.Lector.Read()) //mientras tenga datos, crea un objeto nuevo
                 {
                     Articulo art = new Articulo();
+                    art.CodArticulo = (String)datos.Lector["Codigo"];
                     art.NombreArticulo = (String)datos.Lector["Nombre"];
+                    art.Descripcion = (String)datos.Lector["Descripcion"];
                     if (!(datos.Lector["ImagenUrl"] is DBNull))
                     {
                         art.UrlImagen = (string)datos.Lector["ImagenUrl"];
                     }
+                    art.CategoriaArticulo = new Categoria();
+                    art.CategoriaArticulo.Id = (int)datos.Lector["IdCategoria"];
+                    art.CategoriaArticulo.NombreCategoria = (String)datos.Lector["Categoria"];
+                    art.MarcaArticulo = new Marca();
+                    art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
+                    art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
+                    art.Precio = (float)(decimal)datos.Lector["Precio"];
+
                     lista.Add(art);
                 }
                 return lista;

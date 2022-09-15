@@ -44,25 +44,26 @@ namespace TPWinForm
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            string campo = cboCampo.SelectedItem.ToString();
-            string criterio = cboCriterio.SelectedItem.ToString();
-            string filtro = txbBusqueda.Text;
             List<Articulo> listaArticulosEncontrados;
 
             try
             {
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txbBusqueda.Text;
                 listaArticulosEncontrados = negocio.filtrar(campo,criterio,filtro);
                 dgvBusqueda.DataSource = listaArticulosEncontrados;
-                if(dgvBusqueda.Rows.Count != 0)
+                //if(dgvBusqueda.Rows.Count != 0)
+                if(dgvBusqueda.CurrentRow != null)
                 {
                     dgvBusqueda.Show(); //muestro el grid
-                    dgvBusqueda.Columns["Id"].Visible = false;
-                    dgvBusqueda.Columns["CodArticulo"].Visible = false;
-                    dgvBusqueda.Columns["Descripcion"].Visible = false;
-                    dgvBusqueda.Columns["MarcaArticulo"].Visible = false;
-                    dgvBusqueda.Columns["CategoriaArticulo"].Visible = false;
-                    dgvBusqueda.Columns["UrlImagen"].Visible = false;
-                    dgvBusqueda.Columns["Precio"].Visible = false;
+                                        // dgvBusqueda.Columns["Id"].Visible = false;
+                                        // dgvBusqueda.Columns["CodArticulo"].Visible = false;
+                                        //dgvBusqueda.Columns["Descripcion"].Visible = false;
+                                        //dgvBusqueda.Columns["CategoriaArticulo"].Visible = false;
+                                        //dgvBusqueda.Columns["MarcaArticulo"].Visible = false;
+                                        //dgvBusqueda.Columns["UrlImagen"].Visible = false;
+                    ocultarColumnas();
                     cargarImagen(listaArticulosEncontrados.First().UrlImagen);
                 }
                 else
@@ -151,8 +152,29 @@ namespace TPWinForm
             }
             dgvBusqueda.DataSource = null;
             dgvBusqueda.DataSource = listaFiltrada;
-            dgvBusqueda.Show();
             ocultarColumnas();
+            dgvBusqueda.Show();
+        }
+
+        private void txtFiltroRapido_TextChanged(object sender, EventArgs e)
+        {
+
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltroRapido.Text;
+
+            if (filtro.Length >= 2)
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+            dgvBusqueda.DataSource = null;
+            dgvBusqueda.DataSource = listaFiltrada;
+            ocultarColumnas();
+            dgvBusqueda.Show();
+            
         }
     }
 }
