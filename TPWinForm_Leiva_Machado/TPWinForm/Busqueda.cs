@@ -14,48 +14,32 @@ namespace TPWinForm
 {
     public partial class Busqueda : Form
     {
+        private List<Articulo> listaArticulos;
         public Busqueda()
         {
             InitializeComponent();
         }
 
-        //private void btnBusqueda_Click(object sender, EventArgs e)
-        //{
-        //    ArticuloNegocio negocio = new ArticuloNegocio();
-        //    Articulo buscado = new Articulo();
-        //    buscado.NombreArticulo = txbBusqueda.Text;
+        public void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            
+            try
+            {
+                listaArticulos = negocio.listarArticulo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
-        //    List<Articulo> listaArticulosEncontrados;
 
-        //    try
-        //    {
-        //        listaArticulosEncontrados = negocio.buscarArticulo(buscado);
-        //        dgvBusqueda.DataSource = listaArticulosEncontrados;
-        //        if(dgvBusqueda.Rows.Count != 0)
-        //        {
-        //            dgvBusqueda.Show(); //muestro el grid
-        //            dgvBusqueda.Columns["Id"].Visible = false;
-        //            dgvBusqueda.Columns["CodArticulo"].Visible = false;
-        //            dgvBusqueda.Columns["Descripcion"].Visible = false;
-        //            dgvBusqueda.Columns["MarcaArticulo"].Visible = false;
-        //            dgvBusqueda.Columns["CategoriaArticulo"].Visible = false;
-        //            dgvBusqueda.Columns["UrlImagen"].Visible = false;
-        //            dgvBusqueda.Columns["Precio"].Visible = false;
-        //            cargarImagen(listaArticulosEncontrados.First().UrlImagen);
-        //        }
-        //        else
-        //        {
-        //            //sino oculto y mensaje sin resultados
-        //            ocultarComponentes();
-        //            MessageBox.Show("Sin resultados");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString());
-        //    }
-        //}
-
+        private void ocultarColumnas()
+        {
+            dgvBusqueda.Columns["UrlImagen"].Visible = false;
+            dgvBusqueda.Columns["Id"].Visible = false;
+        }
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
@@ -110,7 +94,7 @@ namespace TPWinForm
 
         private void dgvBusqueda_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvBusqueda.Rows.Count != 0) //solo si tiene rows el datagridview
+            if(dgvBusqueda.CurrentRow != null) 
             {
                 Articulo articuloSeleccionado = (Articulo)dgvBusqueda.CurrentRow.DataBoundItem;
                 cargarImagen(articuloSeleccionado.UrlImagen);
@@ -120,6 +104,7 @@ namespace TPWinForm
         private void Busqueda_Load(object sender, EventArgs e)
         {
             ocultarComponentes();
+            cargar();
             cboCampo.Items.Add("Precio");
             cboCampo.Items.Add("Nombre");
             cboCampo.Items.Add("Categoria");
@@ -148,6 +133,26 @@ namespace TPWinForm
                 cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltroRapido.Text;
+
+            if (filtro != "")
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+            dgvBusqueda.DataSource = null;
+            dgvBusqueda.DataSource = listaFiltrada;
+            dgvBusqueda.Show();
+            ocultarColumnas();
         }
     }
 }

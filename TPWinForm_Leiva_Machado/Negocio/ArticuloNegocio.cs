@@ -11,6 +11,7 @@ namespace Negocio
     public class ArticuloNegocio
     {
         private AccesoDatos datos = new AccesoDatos(); //cambio a una propiedad privada para no instanciar en todos los metodos
+        
         public List<Articulo> listarArticulo()
         {
             List<Articulo> lista = new List<Articulo>();

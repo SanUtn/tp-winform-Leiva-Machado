@@ -82,9 +82,9 @@ namespace TPWinForm
             this.dgvBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBusqueda.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusqueda.Location = new System.Drawing.Point(51, 202);
+            this.dgvBusqueda.Location = new System.Drawing.Point(51, 207);
             this.dgvBusqueda.Name = "dgvBusqueda";
-            this.dgvBusqueda.Size = new System.Drawing.Size(444, 204);
+            this.dgvBusqueda.Size = new System.Drawing.Size(464, 204);
             this.dgvBusqueda.TabIndex = 3;
             this.dgvBusqueda.SelectionChanged += new System.EventHandler(this.dgvBusqueda_SelectionChanged);
             // 
@@ -154,6 +154,7 @@ namespace TPWinForm
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Busqueda
             // 
