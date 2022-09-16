@@ -57,16 +57,10 @@ namespace TPWinForm
                 string filtro = txbBusqueda.Text;
                 listaArticulosEncontrados = negocio.filtrar(campo,criterio,filtro);
                 dgvBusqueda.DataSource = listaArticulosEncontrados;
-                //if(dgvBusqueda.Rows.Count != 0)
+               
                 if(dgvBusqueda.CurrentRow != null)
                 {
-                    dgvBusqueda.Show(); //muestro el grid
-                                        // dgvBusqueda.Columns["Id"].Visible = false;
-                                        // dgvBusqueda.Columns["CodArticulo"].Visible = false;
-                                        //dgvBusqueda.Columns["Descripcion"].Visible = false;
-                                        //dgvBusqueda.Columns["CategoriaArticulo"].Visible = false;
-                                        //dgvBusqueda.Columns["MarcaArticulo"].Visible = false;
-                                        //dgvBusqueda.Columns["UrlImagen"].Visible = false;
+                    dgvBusqueda.Show(); //muestro el grid            
                     ocultarColumnas();
                     cargarImagen(listaArticulosEncontrados.First().UrlImagen);
                 }
@@ -110,9 +104,11 @@ namespace TPWinForm
         {
             ocultarComponentes();
             cargar();
-            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Codigo");
             cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoria");
+            cboCampo.Items.Add("Precio");
         }
 
         private void ocultarComponentes()
