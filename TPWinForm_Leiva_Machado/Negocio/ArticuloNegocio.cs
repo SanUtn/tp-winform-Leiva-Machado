@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN Marcas M ON A.IdMarca = M.id where A.Activo = 1");
+                datos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN Marcas M ON A.IdMarca = M.id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id where A.Activo = 1");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -36,7 +36,14 @@ namespace Negocio
 
                     art.CategoriaArticulo = new Categoria();
                     art.CategoriaArticulo.Id = (int)datos.Lector["IdCategoria"];
-                    art.CategoriaArticulo.NombreCategoria = (String)datos.Lector["Categoria"];
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                    {
+                        art.CategoriaArticulo.NombreCategoria = (String)datos.Lector["Categoria"];
+                    }
+                    else
+                    {
+                        art.CategoriaArticulo.NombreCategoria = "";
+                    }
                     art.MarcaArticulo = new Marca();
                     art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                     art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
@@ -57,38 +64,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-
-        /*public List<Articulo> buscarArticulo(Articulo buscado)
-        {
-            List<Articulo> encontrados = new List<Articulo>();
-            try
-            {
-                datos.setearConsulta("SELECT Nombre, ImagenUrl FROM ARTICULOS WHERE Nombre like @buscado");
-                datos.setearParametro("@buscado", "%"+buscado.NombreArticulo+"%"); //polemico
-                datos.ejecutarLectura();
-
-                while(datos.Lector.Read())
-                {
-                    Articulo art = new Articulo();
-                    art.NombreArticulo = (String)datos.Lector["Nombre"];
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                    {
-                        art.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    }
-                    encontrados.Add(art);
-                }
-                    return encontrados;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }*/
 
         public void agregar(Articulo nuevo)
         {
@@ -181,11 +156,11 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN Marcas M ON A.IdMarca = M.id where A.Activo = 1 and";
+                string consulta = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdCategoria, A.IdMarca,A.ImagenUrl, C.Descripcion 'Categoria', M.Descripcion 'Marca', A.Precio from Articulos A LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN Marcas M ON A.IdMarca = M.id where A.Activo = 1 and";
 
                 if (campo == "Precio")
                 {
-                   // consulta += "WHERE ";
+                  
                     switch (criterio)
                     {
                         case "Mayor a":
@@ -201,7 +176,7 @@ namespace Negocio
                 }
                 else if (campo == "Nombre")
                 {
-                    //consulta += "WHERE ";
+                    
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -217,7 +192,7 @@ namespace Negocio
                 }
                 else
                 {
-                    //consulta += "LEFT JOIN Categorias C ON C.ID = A.IdCategoria WHERE";
+                    
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -248,7 +223,14 @@ namespace Negocio
                     }
                     art.CategoriaArticulo = new Categoria();
                     art.CategoriaArticulo.Id = (int)datos.Lector["IdCategoria"];
-                    art.CategoriaArticulo.NombreCategoria = (String)datos.Lector["Categoria"];
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                    {
+                        art.CategoriaArticulo.NombreCategoria = (String)datos.Lector["Categoria"];
+                    } else
+                    {
+                        art.CategoriaArticulo.NombreCategoria = "";
+                    }
+                        
                     art.MarcaArticulo = new Marca();
                     art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                     art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
