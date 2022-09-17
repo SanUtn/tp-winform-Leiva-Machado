@@ -170,7 +170,7 @@ namespace TPWinForm
             this.txtPrecioM.Name = "txtPrecioM";
             this.txtPrecioM.Size = new System.Drawing.Size(240, 20);
             this.txtPrecioM.TabIndex = 6;
-            this.txtPrecioM.Leave += new System.EventHandler(this.txtPrecioM_Leave);
+            //this.txtPrecioM.Leave += new System.EventHandler(this.txtPrecioM_Leave);
             // 
             // lbCategoriaM
             // 

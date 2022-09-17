@@ -204,9 +204,9 @@ namespace TPWinForm
 
         }
 
-        private void txtPrecioM_Leave(object sender, EventArgs e)
-        {
-            helper.formatoMoneda(txtPrecioM);
-        }
+        //private void txtPrecioM_Leave(object sender, EventArgs e)
+        //{
+        //    helper.formatoMoneda(txtPrecioM);
+        //}
     }
 }
