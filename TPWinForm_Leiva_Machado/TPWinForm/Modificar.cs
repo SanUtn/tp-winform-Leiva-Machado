@@ -134,14 +134,12 @@ namespace TPWinForm
 
                 MessageBox.Show("Modificado exitosamente");
                 limpiarForm();
+                ocultarLabels();
+                cargar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                cargar();
             }
 
         }
@@ -193,8 +191,7 @@ namespace TPWinForm
         public void ocultarLabels()
         {
             lbErrorVacioM.Visible = false;
-            lbError2M.Visible = false;
-          
+            lbError2M.Visible = false; 
         }
 
         public void limpiarForm()

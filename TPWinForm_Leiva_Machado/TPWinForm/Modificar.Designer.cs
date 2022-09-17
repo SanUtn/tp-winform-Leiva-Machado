@@ -256,7 +256,7 @@ namespace TPWinForm
             this.lbInfo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfo.Location = new System.Drawing.Point(113, 193);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(129, 16);
+            this.lbInfo.Size = new System.Drawing.Size(130, 16);
             this.lbInfo.TabIndex = 72;
             this.lbInfo.Text = "* Campos obligatorios";
             // 
@@ -266,9 +266,9 @@ namespace TPWinForm
             this.lbError2M.ForeColor = System.Drawing.Color.Red;
             this.lbError2M.Location = new System.Drawing.Point(460, 308);
             this.lbError2M.Name = "lbError2M";
-            this.lbError2M.Size = new System.Drawing.Size(201, 13);
+            this.lbError2M.Size = new System.Drawing.Size(227, 13);
             this.lbError2M.TabIndex = 71;
-            this.lbError2M.Text = "* El campo admite solo números positivos";
+            this.lbError2M.Text = "* Precio: solo numeros (punto como separador)";
             this.lbError2M.UseWaitCursor = true;
             // 
             // lbErrorVacioM

@@ -23,15 +23,13 @@ namespace Helper
 
         public bool soloNumerosDecimales(string cadena)
         {
-            bool bandera = false;
             foreach (char caracter in cadena)
             {
-                bandera = false;
-                if (char.IsDigit(caracter) || char.IsNumber(caracter))
-                    bandera = true;
+                if (caracter != '.' && !char.IsNumber(caracter))
+                    return false;
 
             }
-            return bandera;
+            return true;
         }
 
         public bool soloLetrasYNumeros(string cadena)
