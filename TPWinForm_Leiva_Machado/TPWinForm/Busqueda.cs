@@ -145,7 +145,7 @@ namespace TPWinForm
 
             if (filtro != "")
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()));
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()) || x.CategoriaArticulo.NombreCategoria.ToUpper().Contains(filtro.ToUpper()) || x.MarcaArticulo.NombreMarca.ToUpper().Contains(filtro.ToUpper()));
             }
             else
             {
@@ -165,7 +165,7 @@ namespace TPWinForm
 
             if (filtro.Length >= 2)
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()));
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()) || x.CategoriaArticulo.NombreCategoria.ToUpper().Contains(filtro.ToUpper()) || x.MarcaArticulo.NombreMarca.ToUpper().Contains(filtro.ToUpper()));
             }
             else
             {
