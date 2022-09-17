@@ -74,7 +74,10 @@ namespace TPWinForm
         private bool validarCampos()
         {
             bool bandera = false;
-            
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+
                 if (string.IsNullOrEmpty(txtCodArticulo.Text))
                 {
                     lbErrorCodArt.Visible = true;
@@ -86,7 +89,15 @@ namespace TPWinForm
                     lbError2CodArt.Visible = true;
                     bandera = true;
                 }
-               
+
+
+                if (negocio.buscarArticulo(txtCodArticulo.Text))
+                {
+                    lbErrorCodArt.Text = "El codigo ingresado ya esta registrado";
+                    lbErrorCodArt.Visible = true;
+                    bandera = true;
+                }
+
                 if (string.IsNullOrEmpty(txtNombre.Text))
                 {
                     lbErrorNombre.Visible = true;

@@ -65,6 +65,31 @@ namespace Negocio
             }
         }
 
+        public bool buscarArticulo(string codigo)
+        {
+            try
+            {
+                datos.setearConsulta("SELECT Codigo FROM ARTICULOS WHERE CODIGO = @codigo AND Activo = 1");
+                datos.setearParametro("@codigo", codigo);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void agregar(Articulo nuevo)
         {
             try
