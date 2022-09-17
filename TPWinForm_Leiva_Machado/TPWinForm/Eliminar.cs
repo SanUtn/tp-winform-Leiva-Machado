@@ -42,6 +42,7 @@ namespace TPWinForm
                 dataListado.DataSource = listaArticulos;
                 dataListado.Columns["UrlImagen"].Visible = false;
                 dataListado.Columns["Activo"].Visible = false;
+                dataListado.Columns["Id"].Visible = false;
                 cargarImagen(listaArticulos.First().UrlImagen);
             }
             catch (Exception ex)

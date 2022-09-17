@@ -48,6 +48,9 @@ namespace TPWinForm
             this.lbImagenM = new System.Windows.Forms.Label();
             this.lbPrecioM = new System.Windows.Forms.Label();
             this.gbFormModificar = new System.Windows.Forms.GroupBox();
+            this.lbInfo = new System.Windows.Forms.Label();
+            this.lbError2M = new System.Windows.Forms.Label();
+            this.lbErrorVacioM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             this.gbFormModificar.SuspendLayout();
@@ -113,9 +116,9 @@ namespace TPWinForm
             this.lbCodArticuloM.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCodArticuloM.Location = new System.Drawing.Point(7, 19);
             this.lbCodArticuloM.Name = "lbCodArticuloM";
-            this.lbCodArticuloM.Size = new System.Drawing.Size(103, 17);
+            this.lbCodArticuloM.Size = new System.Drawing.Size(109, 17);
             this.lbCodArticuloM.TabIndex = 52;
-            this.lbCodArticuloM.Text = "Código Artículo:";
+            this.lbCodArticuloM.Text = "*Código Artículo:";
             // 
             // txtCodArticuloM
             // 
@@ -140,9 +143,9 @@ namespace TPWinForm
             this.lbNombreM.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreM.Location = new System.Drawing.Point(7, 45);
             this.lbNombreM.Name = "lbNombreM";
-            this.lbNombreM.Size = new System.Drawing.Size(60, 17);
+            this.lbNombreM.Size = new System.Drawing.Size(66, 17);
             this.lbNombreM.TabIndex = 56;
-            this.lbNombreM.Text = "Nombre:";
+            this.lbNombreM.Text = "*Nombre:";
             // 
             // txtNombreM
             // 
@@ -167,6 +170,7 @@ namespace TPWinForm
             this.txtPrecioM.Name = "txtPrecioM";
             this.txtPrecioM.Size = new System.Drawing.Size(240, 20);
             this.txtPrecioM.TabIndex = 6;
+            this.txtPrecioM.Leave += new System.EventHandler(this.txtPrecioM_Leave);
             // 
             // lbCategoriaM
             // 
@@ -187,6 +191,7 @@ namespace TPWinForm
             // 
             // cboMarcaM
             // 
+            this.cboMarcaM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarcaM.FormattingEnabled = true;
             this.cboMarcaM.Location = new System.Drawing.Point(115, 93);
             this.cboMarcaM.Name = "cboMarcaM";
@@ -195,6 +200,7 @@ namespace TPWinForm
             // 
             // cboCategoriaM
             // 
+            this.cboCategoriaM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoriaM.FormattingEnabled = true;
             this.cboCategoriaM.Location = new System.Drawing.Point(115, 119);
             this.cboCategoriaM.Name = "cboCategoriaM";
@@ -217,12 +223,13 @@ namespace TPWinForm
             this.lbPrecioM.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrecioM.Location = new System.Drawing.Point(7, 175);
             this.lbPrecioM.Name = "lbPrecioM";
-            this.lbPrecioM.Size = new System.Drawing.Size(50, 17);
+            this.lbPrecioM.Size = new System.Drawing.Size(56, 17);
             this.lbPrecioM.TabIndex = 65;
-            this.lbPrecioM.Text = "Precio:";
+            this.lbPrecioM.Text = "*Precio:";
             // 
             // gbFormModificar
             // 
+            this.gbFormModificar.Controls.Add(this.lbInfo);
             this.gbFormModificar.Controls.Add(this.lbPrecioM);
             this.gbFormModificar.Controls.Add(this.lbImagenM);
             this.gbFormModificar.Controls.Add(this.cboCategoriaM);
@@ -243,11 +250,45 @@ namespace TPWinForm
             this.gbFormModificar.TabIndex = 69;
             this.gbFormModificar.TabStop = false;
             // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.Location = new System.Drawing.Point(113, 193);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(129, 16);
+            this.lbInfo.TabIndex = 72;
+            this.lbInfo.Text = "* Campos obligatorios";
+            // 
+            // lbError2M
+            // 
+            this.lbError2M.AutoSize = true;
+            this.lbError2M.ForeColor = System.Drawing.Color.Red;
+            this.lbError2M.Location = new System.Drawing.Point(460, 308);
+            this.lbError2M.Name = "lbError2M";
+            this.lbError2M.Size = new System.Drawing.Size(201, 13);
+            this.lbError2M.TabIndex = 71;
+            this.lbError2M.Text = "* El campo admite solo números positivos";
+            this.lbError2M.UseWaitCursor = true;
+            // 
+            // lbErrorVacioM
+            // 
+            this.lbErrorVacioM.AutoSize = true;
+            this.lbErrorVacioM.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorVacioM.Location = new System.Drawing.Point(459, 295);
+            this.lbErrorVacioM.Name = "lbErrorVacioM";
+            this.lbErrorVacioM.Size = new System.Drawing.Size(101, 13);
+            this.lbErrorVacioM.TabIndex = 70;
+            this.lbErrorVacioM.Text = "* Campo incompleto";
+            this.lbErrorVacioM.UseWaitCursor = true;
+            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbError2M);
+            this.Controls.Add(this.lbErrorVacioM);
             this.Controls.Add(this.gbFormModificar);
             this.Controls.Add(this.pbModificar);
             this.Controls.Add(this.dataListado);
@@ -288,5 +329,8 @@ namespace TPWinForm
         private System.Windows.Forms.Label lbImagenM;
         private System.Windows.Forms.Label lbPrecioM;
         private System.Windows.Forms.GroupBox gbFormModificar;
+        private System.Windows.Forms.Label lbError2M;
+        private System.Windows.Forms.Label lbErrorVacioM;
+        private System.Windows.Forms.Label lbInfo;
     }
 }

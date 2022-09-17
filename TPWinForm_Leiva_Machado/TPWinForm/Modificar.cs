@@ -16,15 +16,18 @@ namespace TPWinForm
     public partial class Modificar : Form
     {
         private Articulo articulo;
+        private MetodosCompartidos helper = new MetodosCompartidos();
         public Modificar()
         {
             InitializeComponent();
+            ocultarLabels();
         }
 
         public Modificar(Articulo articulo)
         {
             InitializeComponent();
             this.articulo = articulo;
+            ocultarLabels();
         }
 
         private void Modificar_Load(object sender, EventArgs e)
@@ -118,6 +121,7 @@ namespace TPWinForm
 
             try
             {
+                if (validarCampos()) { return; }
                 articulo.CodArticulo = txtCodArticuloM.Text;
                 articulo.NombreArticulo = txtNombreM.Text;
                 articulo.Descripcion = txtDescripcionM.Text;
@@ -129,6 +133,7 @@ namespace TPWinForm
                 negocio.modificar(articulo);
 
                 MessageBox.Show("Modificado exitosamente");
+                limpiarForm();
             }
             catch (Exception ex)
             {
@@ -138,6 +143,73 @@ namespace TPWinForm
             {
                 cargar();
             }
+
+        }
+
+        private bool validarCampos()
+        {
+            bool bandera = false;
+
+            if (string.IsNullOrEmpty(txtCodArticuloM.Text))
+            {
+                lbErrorVacioM.Visible = true;
+                bandera = true;
+            }
+
+            if (!(helper.soloLetrasYNumeros(txtCodArticuloM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
+            {
+                lbError2M.Visible = true;
+                bandera = true;
+            }
+
+            if (string.IsNullOrEmpty(txtNombreM.Text))
+            {
+                lbErrorVacioM.Visible = true;
+                bandera = true;
+            }
+
+            if (!(helper.soloLetrasYNumeros(txtNombreM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
+            {
+                lbError2M.Visible = true;
+                bandera = true;
+            }
+
+            if (string.IsNullOrEmpty(txtPrecioM.Text))
+            {
+                lbErrorVacioM.Visible = true;
+                bandera = true;
+            }
+
+            if (!(helper.soloNumerosDecimales(txtPrecioM.Text)) && !(string.IsNullOrEmpty(txtPrecioM.Text)))
+
+            {
+                lbError2M.Visible = true;
+                bandera = true;
+            }
+
+            return bandera;
+        }
+
+        public void ocultarLabels()
+        {
+            lbErrorVacioM.Visible = false;
+            lbError2M.Visible = false;
+          
+        }
+
+        public void limpiarForm()
+        {
+            txtCodArticuloM.Clear();
+            txtNombreM.Clear();
+            txtDescripcionM.Clear();
+            txtImagenM.Clear();
+            txtPrecioM.Clear();
+
+        }
+
+        private void txtPrecioM_Leave(object sender, EventArgs e)
+        {
+            helper.formatoMoneda(txtPrecioM);
         }
     }
 }
