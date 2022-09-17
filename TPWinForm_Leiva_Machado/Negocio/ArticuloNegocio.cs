@@ -47,7 +47,7 @@ namespace Negocio
                     art.MarcaArticulo = new Marca();
                     art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                     art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
-                    art.Precio = (float)(decimal)datos.Lector["Precio"]; //hay que revisar esto
+                    art.Precio = (decimal)datos.Lector["Precio"]; 
                
 
                     lista.Add(art);
@@ -69,7 +69,7 @@ namespace Negocio
         {
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) VALUES(@codigo, @nombre, @descripcion, @idmarca, @idcategoria, @imagen, @precio)");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio, Activo) VALUES(@codigo, @nombre, @descripcion, @idmarca, @idcategoria, @imagen, @precio, @activo)");
                 datos.setearParametro("@codigo", nuevo.CodArticulo);
                 datos.setearParametro("@nombre", nuevo.NombreArticulo);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
@@ -77,6 +77,7 @@ namespace Negocio
                 datos.setearParametro("@idcategoria", nuevo.CategoriaArticulo.Id);
                 datos.setearParametro("@imagen", nuevo.UrlImagen);
                 datos.setearParametro("@precio", nuevo.Precio);
+                datos.setearParametro("@activo", nuevo.Activo);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -265,7 +266,7 @@ namespace Negocio
                         art.MarcaArticulo = new Marca();
                         art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                         art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
-                        art.Precio = (float)(decimal)datos.Lector["Precio"];
+                        art.Precio = (decimal)datos.Lector["Precio"];
 
                         lista.Add(art);
                     }

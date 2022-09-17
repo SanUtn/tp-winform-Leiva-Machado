@@ -42,6 +42,7 @@ namespace TPWinForm
         {
             dgvBusqueda.Columns["UrlImagen"].Visible = false;
             dgvBusqueda.Columns["Id"].Visible = false;
+            dgvBusqueda.Columns["Activo"].Visible = false;
         }
 
         private void btnBusqueda_Click(object sender, EventArgs e)

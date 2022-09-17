@@ -57,11 +57,13 @@ namespace TPWinForm
                 nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
                 nuevo.CategoriaArticulo = (Categoria)cboCategoria.SelectedItem;
                 nuevo.UrlImagen = txtImagen.Text;
-                nuevo.Precio = float.Parse(txtPrecio.Text);
+                nuevo.Precio = decimal.Parse(txtPrecio.Text);
+                nuevo.Activo = true;
 
                 negocio.agregar(nuevo);
 
                 MessageBox.Show("Agregado exitosamente");
+                limpiarForm();
             }
             catch (Exception ex)
             {
@@ -103,7 +105,8 @@ namespace TPWinForm
                     bandera = true;
                 }
 
-                if (!(helper.soloNumeros(txtPrecio.Text)))
+                if (!(helper.soloNumerosDecimales(txtPrecio.Text)) && !(string.IsNullOrEmpty(txtPrecio.Text)))
+            
                 {
                     lbError2Precio.Visible = true;
                     bandera = true;
@@ -120,6 +123,20 @@ namespace TPWinForm
             lbError2Nombre.Visible = false;
             lbErrorPrecio.Visible = false;
             lbError2Precio.Visible = false;
+        }
+
+        public void limpiarForm()
+        {
+            txtCodArticulo.Clear();
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtImagen.Clear();
+            txtPrecio.Clear();
+        }
+
+        private void txtPrecio_Leave(object sender, EventArgs e)
+        {
+            helper.formatoMoneda(txtPrecio);
         }
     }
 }

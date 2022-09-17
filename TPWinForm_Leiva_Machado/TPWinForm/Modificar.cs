@@ -78,6 +78,7 @@ namespace TPWinForm
                 dataListado.DataSource = listaArticulos;
                 dataListado.Columns["Id"].Visible = false;
                 dataListado.Columns["UrlImagen"].Visible = false;
+                dataListado.Columns["Activo"].Visible = false;
                 cargarImagen(listaArticulos.First().UrlImagen);
 
             }
@@ -123,7 +124,7 @@ namespace TPWinForm
                 articulo.MarcaArticulo = (Marca)cboMarcaM.SelectedItem;
                 articulo.CategoriaArticulo = (Categoria)cboCategoriaM.SelectedItem;
                 articulo.UrlImagen = txtImagenM.Text;
-                articulo.Precio = float.Parse(txtPrecioM.Text);
+                articulo.Precio = decimal.Parse(txtPrecioM.Text);
 
                 negocio.modificar(articulo);
 

@@ -121,6 +121,7 @@ namespace TPWinForm
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(240, 20);
             this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // lbMarca
             // 
