@@ -19,6 +19,19 @@ namespace Helper
             return true;
         }
 
+        public bool soloLetrasYNumeros(string cadena)
+        {
+            bool bandera = false;
+            foreach (char caracter in cadena)
+            {
+                bandera = false;
+                if (char.IsLetter(caracter) || char.IsNumber(caracter)) 
+                    bandera = true;
+                     
+            }
+            return bandera;
+        }
+
 
     }
 }

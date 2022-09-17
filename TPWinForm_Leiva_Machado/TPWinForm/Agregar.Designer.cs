@@ -45,6 +45,13 @@ namespace TPWinForm
             this.lbImagen = new System.Windows.Forms.Label();
             this.lbPrecio = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.lbErrorCodArt = new System.Windows.Forms.Label();
+            this.lbInfo = new System.Windows.Forms.Label();
+            this.lbError2CodArt = new System.Windows.Forms.Label();
+            this.lbErrorNombre = new System.Windows.Forms.Label();
+            this.lbError2Nombre = new System.Windows.Forms.Label();
+            this.lbErrorPrecio = new System.Windows.Forms.Label();
+            this.lbError2Precio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbAgregarTitulo
@@ -63,9 +70,9 @@ namespace TPWinForm
             this.lbCodArticulo.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCodArticulo.Location = new System.Drawing.Point(209, 99);
             this.lbCodArticulo.Name = "lbCodArticulo";
-            this.lbCodArticulo.Size = new System.Drawing.Size(103, 17);
+            this.lbCodArticulo.Size = new System.Drawing.Size(109, 17);
             this.lbCodArticulo.TabIndex = 2;
-            this.lbCodArticulo.Text = "Código Artículo:";
+            this.lbCodArticulo.Text = "*Código Artículo:";
             // 
             // txtCodArticulo
             // 
@@ -104,9 +111,9 @@ namespace TPWinForm
             this.lbNombre.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre.Location = new System.Drawing.Point(209, 125);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(60, 17);
+            this.lbNombre.Size = new System.Drawing.Size(66, 17);
             this.lbNombre.TabIndex = 6;
-            this.lbNombre.Text = "Nombre:";
+            this.lbNombre.Text = "*Nombre:";
             // 
             // txtPrecio
             // 
@@ -176,9 +183,9 @@ namespace TPWinForm
             this.lbPrecio.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrecio.Location = new System.Drawing.Point(209, 255);
             this.lbPrecio.Name = "lbPrecio";
-            this.lbPrecio.Size = new System.Drawing.Size(50, 17);
+            this.lbPrecio.Size = new System.Drawing.Size(56, 17);
             this.lbPrecio.TabIndex = 15;
-            this.lbPrecio.Text = "Precio:";
+            this.lbPrecio.Text = "*Precio:";
             // 
             // btnAgregar
             // 
@@ -195,11 +202,94 @@ namespace TPWinForm
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // lbErrorCodArt
+            // 
+            this.lbErrorCodArt.AutoSize = true;
+            this.lbErrorCodArt.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorCodArt.Location = new System.Drawing.Point(563, 96);
+            this.lbErrorCodArt.Name = "lbErrorCodArt";
+            this.lbErrorCodArt.Size = new System.Drawing.Size(101, 13);
+            this.lbErrorCodArt.TabIndex = 16;
+            this.lbErrorCodArt.Text = "* Campo incompleto";
+            this.lbErrorCodArt.UseWaitCursor = true;
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.Location = new System.Drawing.Point(315, 275);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(129, 16);
+            this.lbInfo.TabIndex = 17;
+            this.lbInfo.Text = "* Campos obligatorios";
+            // 
+            // lbError2CodArt
+            // 
+            this.lbError2CodArt.AutoSize = true;
+            this.lbError2CodArt.ForeColor = System.Drawing.Color.Red;
+            this.lbError2CodArt.Location = new System.Drawing.Point(563, 109);
+            this.lbError2CodArt.Name = "lbError2CodArt";
+            this.lbError2CodArt.Size = new System.Drawing.Size(182, 13);
+            this.lbError2CodArt.TabIndex = 18;
+            this.lbError2CodArt.Text = "* El campo admite letras y/o números";
+            this.lbError2CodArt.UseWaitCursor = true;
+            // 
+            // lbErrorNombre
+            // 
+            this.lbErrorNombre.AutoSize = true;
+            this.lbErrorNombre.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorNombre.Location = new System.Drawing.Point(563, 122);
+            this.lbErrorNombre.Name = "lbErrorNombre";
+            this.lbErrorNombre.Size = new System.Drawing.Size(101, 13);
+            this.lbErrorNombre.TabIndex = 19;
+            this.lbErrorNombre.Text = "* Campo incompleto";
+            this.lbErrorNombre.UseWaitCursor = true;
+            // 
+            // lbError2Nombre
+            // 
+            this.lbError2Nombre.AutoSize = true;
+            this.lbError2Nombre.ForeColor = System.Drawing.Color.Red;
+            this.lbError2Nombre.Location = new System.Drawing.Point(563, 135);
+            this.lbError2Nombre.Name = "lbError2Nombre";
+            this.lbError2Nombre.Size = new System.Drawing.Size(182, 13);
+            this.lbError2Nombre.TabIndex = 20;
+            this.lbError2Nombre.Text = "* El campo admite letras y/o números";
+            this.lbError2Nombre.UseWaitCursor = true;
+            // 
+            // lbErrorPrecio
+            // 
+            this.lbErrorPrecio.AutoSize = true;
+            this.lbErrorPrecio.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorPrecio.Location = new System.Drawing.Point(563, 252);
+            this.lbErrorPrecio.Name = "lbErrorPrecio";
+            this.lbErrorPrecio.Size = new System.Drawing.Size(101, 13);
+            this.lbErrorPrecio.TabIndex = 21;
+            this.lbErrorPrecio.Text = "* Campo incompleto";
+            this.lbErrorPrecio.UseWaitCursor = true;
+            // 
+            // lbError2Precio
+            // 
+            this.lbError2Precio.AutoSize = true;
+            this.lbError2Precio.ForeColor = System.Drawing.Color.Red;
+            this.lbError2Precio.Location = new System.Drawing.Point(564, 265);
+            this.lbError2Precio.Name = "lbError2Precio";
+            this.lbError2Precio.Size = new System.Drawing.Size(201, 13);
+            this.lbError2Precio.TabIndex = 22;
+            this.lbError2Precio.Text = "* El campo admite solo números positivos";
+            this.lbError2Precio.UseWaitCursor = true;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbError2Precio);
+            this.Controls.Add(this.lbErrorPrecio);
+            this.Controls.Add(this.lbError2Nombre);
+            this.Controls.Add(this.lbErrorNombre);
+            this.Controls.Add(this.lbError2CodArt);
+            this.Controls.Add(this.lbInfo);
+            this.Controls.Add(this.lbErrorCodArt);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lbPrecio);
             this.Controls.Add(this.lbImagen);
@@ -243,5 +333,12 @@ namespace TPWinForm
         private System.Windows.Forms.Label lbImagen;
         private System.Windows.Forms.Label lbPrecio;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label lbErrorCodArt;
+        private System.Windows.Forms.Label lbInfo;
+        private System.Windows.Forms.Label lbError2CodArt;
+        private System.Windows.Forms.Label lbErrorNombre;
+        private System.Windows.Forms.Label lbError2Nombre;
+        private System.Windows.Forms.Label lbErrorPrecio;
+        private System.Windows.Forms.Label lbError2Precio;
     }
 }

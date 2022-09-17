@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using Helper;
 using Negocio;
 
 namespace TPWinForm
 {
     public partial class Agregar : Form
     {
+        private MetodosCompartidos helper = new MetodosCompartidos();
         public Agregar()
         {
             InitializeComponent();
+            ocultarLabels();
         }
 
         private void Agregar_Load(object sender, EventArgs e)
@@ -42,10 +45,12 @@ namespace TPWinForm
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            ocultarLabels();
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo nuevo = new Articulo();
             try
             {
+                if (validarCampos()) { return; }
                 nuevo.CodArticulo = txtCodArticulo.Text;
                 nuevo.NombreArticulo = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
@@ -62,6 +67,59 @@ namespace TPWinForm
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private bool validarCampos()
+        {
+            bool bandera = false;
+            
+                if (string.IsNullOrEmpty(txtCodArticulo.Text))
+                {
+                    lbErrorCodArt.Visible = true;
+                    bandera = true;
+                }
+
+                if (!(helper.soloLetrasYNumeros(txtCodArticulo.Text)) && !(string.IsNullOrEmpty(txtNombre.Text)))
+                {
+                    lbError2CodArt.Visible = true;
+                    bandera = true;
+                }
+               
+                if (string.IsNullOrEmpty(txtNombre.Text))
+                {
+                    lbErrorNombre.Visible = true;
+                    bandera = true;
+                }
+
+                if (!(helper.soloLetrasYNumeros(txtNombre.Text)) && !(string.IsNullOrEmpty(txtNombre.Text)))
+                {
+                    lbError2Nombre.Visible = true;
+                    bandera = true;
+                }
+         
+                if (string.IsNullOrEmpty(txtPrecio.Text))
+                {
+                    lbErrorPrecio.Visible = true;
+                    bandera = true;
+                }
+
+                if (!(helper.soloNumeros(txtPrecio.Text)))
+                {
+                    lbError2Precio.Visible = true;
+                    bandera = true;
+                }
+
+            return bandera;
+        }
+
+        public void ocultarLabels()
+        {
+            lbErrorCodArt.Visible = false;
+            lbError2CodArt.Visible = false;
+            lbErrorNombre.Visible = false;
+            lbError2Nombre.Visible = false;
+            lbErrorPrecio.Visible = false;
+            lbError2Precio.Visible = false;
         }
     }
 }
