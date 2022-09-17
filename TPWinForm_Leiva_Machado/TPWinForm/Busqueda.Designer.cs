@@ -54,11 +54,11 @@ namespace TPWinForm
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnBusqueda.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusqueda.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnBusqueda.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnBusqueda.Location = new System.Drawing.Point(582, 144);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(75, 23);

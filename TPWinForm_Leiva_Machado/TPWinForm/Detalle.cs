@@ -21,9 +21,16 @@ namespace TPWinForm
         public Detalle(Articulo aux)
         {
             InitializeComponent();
+            cargarDetalle(aux);
+        }
+        private void cargarDetalle(Articulo aux)
+        {
             lbNombre.Text = aux.NombreArticulo;
-            lbDescripcion.Text = aux.Descripcion;
+            lbDescripcion.Text = string.IsNullOrWhiteSpace(aux.Descripcion) ? "Sin descripción" : aux.Descripcion;
             lblPrecio.Text += aux.Precio;
+            lbCategoria.Text += string.IsNullOrWhiteSpace(aux.CategoriaArticulo.NombreCategoria) ? " Sin categoria" : aux.CategoriaArticulo.NombreCategoria;
+            lbMarca.Text += string.IsNullOrWhiteSpace(aux.MarcaArticulo.NombreMarca) ? " Sin marca" : aux.MarcaArticulo.NombreMarca;
+            lbCodigo.Text += aux.CodArticulo;
             cargarImagen(aux.UrlImagen);
         }
 
@@ -36,8 +43,8 @@ namespace TPWinForm
             catch (Exception ex)
             {
                 pbDetalle.Load("https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png");
+               
             }
         }
-
     }
 }
