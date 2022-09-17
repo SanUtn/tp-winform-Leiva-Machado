@@ -52,6 +52,9 @@ namespace Helper
             if(xTbox.Text == string.Empty)
             {
                 return;
+            }else if (!soloNumeros(xTbox.Text))
+            {
+                return;
             }else
             {
                 decimal monto;
