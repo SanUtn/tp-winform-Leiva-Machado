@@ -73,12 +73,12 @@ namespace TPWinForm
 
         private bool validarCampos()
         {
-            bool bandera = false;
+            
 
             ArticuloNegocio negocio = new ArticuloNegocio();
+            bool bandera = false;
 
-
-                if (string.IsNullOrEmpty(txtCodArticulo.Text))
+            if (string.IsNullOrEmpty(txtCodArticulo.Text))
                 {
                     lbErrorCodArt.Visible = true;
                     bandera = true;

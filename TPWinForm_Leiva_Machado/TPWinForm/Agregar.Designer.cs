@@ -121,7 +121,6 @@ namespace TPWinForm
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(240, 20);
             this.txtPrecio.TabIndex = 6;
-            //this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // lbMarca
             // 
@@ -220,7 +219,7 @@ namespace TPWinForm
             this.lbInfo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfo.Location = new System.Drawing.Point(315, 275);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(130, 16);
+            this.lbInfo.Size = new System.Drawing.Size(129, 16);
             this.lbInfo.TabIndex = 17;
             this.lbInfo.Text = "* Campos obligatorios";
             // 
@@ -274,9 +273,9 @@ namespace TPWinForm
             this.lbError2Precio.ForeColor = System.Drawing.Color.Red;
             this.lbError2Precio.Location = new System.Drawing.Point(564, 265);
             this.lbError2Precio.Name = "lbError2Precio";
-            this.lbError2Precio.Size = new System.Drawing.Size(193, 13);
+            this.lbError2Precio.Size = new System.Drawing.Size(210, 13);
             this.lbError2Precio.TabIndex = 22;
-            this.lbError2Precio.Text = "* Solo numeros (punto como separador)";
+            this.lbError2Precio.Text = "* Solo numeros (utilizar coma de separador)";
             this.lbError2Precio.UseWaitCursor = true;
             // 
             // Agregar

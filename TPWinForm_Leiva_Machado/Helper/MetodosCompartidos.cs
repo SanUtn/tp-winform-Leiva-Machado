@@ -25,7 +25,7 @@ namespace Helper
         {
             foreach (char caracter in cadena)
             {
-                if (caracter != '.'  && !char.IsNumber(caracter))
+                if (caracter != ','  && !char.IsNumber(caracter))
                     return false;
 
             }
