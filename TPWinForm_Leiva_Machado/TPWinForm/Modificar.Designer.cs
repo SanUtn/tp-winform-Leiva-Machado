@@ -51,6 +51,8 @@ namespace TPWinForm
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbError2M = new System.Windows.Forms.Label();
             this.lbErrorVacioM = new System.Windows.Forms.Label();
+            this.lbError2CodArtM = new System.Windows.Forms.Label();
+            this.lbError2NombreM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             this.gbFormModificar.SuspendLayout();
@@ -170,7 +172,6 @@ namespace TPWinForm
             this.txtPrecioM.Name = "txtPrecioM";
             this.txtPrecioM.Size = new System.Drawing.Size(240, 20);
             this.txtPrecioM.TabIndex = 6;
-            //this.txtPrecioM.Leave += new System.EventHandler(this.txtPrecioM_Leave);
             // 
             // lbCategoriaM
             // 
@@ -229,6 +230,7 @@ namespace TPWinForm
             // 
             // gbFormModificar
             // 
+            this.gbFormModificar.Controls.Add(this.lbError2NombreM);
             this.gbFormModificar.Controls.Add(this.lbInfo);
             this.gbFormModificar.Controls.Add(this.lbPrecioM);
             this.gbFormModificar.Controls.Add(this.lbImagenM);
@@ -256,7 +258,7 @@ namespace TPWinForm
             this.lbInfo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfo.Location = new System.Drawing.Point(113, 193);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(130, 16);
+            this.lbInfo.Size = new System.Drawing.Size(129, 16);
             this.lbInfo.TabIndex = 72;
             this.lbInfo.Text = "* Campos obligatorios";
             // 
@@ -266,9 +268,9 @@ namespace TPWinForm
             this.lbError2M.ForeColor = System.Drawing.Color.Red;
             this.lbError2M.Location = new System.Drawing.Point(460, 308);
             this.lbError2M.Name = "lbError2M";
-            this.lbError2M.Size = new System.Drawing.Size(227, 13);
+            this.lbError2M.Size = new System.Drawing.Size(244, 13);
             this.lbError2M.TabIndex = 71;
-            this.lbError2M.Text = "* Precio: solo numeros (punto como separador)";
+            this.lbError2M.Text = "* Precio: solo numeros (utilizar coma de separador)";
             this.lbError2M.UseWaitCursor = true;
             // 
             // lbErrorVacioM
@@ -282,11 +284,34 @@ namespace TPWinForm
             this.lbErrorVacioM.Text = "* Campo incompleto";
             this.lbErrorVacioM.UseWaitCursor = true;
             // 
+            // lbError2CodArtM
+            // 
+            this.lbError2CodArtM.AutoSize = true;
+            this.lbError2CodArtM.ForeColor = System.Drawing.Color.Red;
+            this.lbError2CodArtM.Location = new System.Drawing.Point(450, 73);
+            this.lbError2CodArtM.Name = "lbError2CodArtM";
+            this.lbError2CodArtM.Size = new System.Drawing.Size(220, 13);
+            this.lbError2CodArtM.TabIndex = 72;
+            this.lbError2CodArtM.Text = "* CodArt: El campo admite letras y/o números";
+            this.lbError2CodArtM.UseWaitCursor = true;
+            // 
+            // lbError2NombreM
+            // 
+            this.lbError2NombreM.AutoSize = true;
+            this.lbError2NombreM.ForeColor = System.Drawing.Color.Red;
+            this.lbError2NombreM.Location = new System.Drawing.Point(-3, 0);
+            this.lbError2NombreM.Name = "lbError2NombreM";
+            this.lbError2NombreM.Size = new System.Drawing.Size(225, 13);
+            this.lbError2NombreM.TabIndex = 73;
+            this.lbError2NombreM.Text = "* Nombre: El campo admite letras y/o números";
+            this.lbError2NombreM.UseWaitCursor = true;
+            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbError2CodArtM);
             this.Controls.Add(this.lbError2M);
             this.Controls.Add(this.lbErrorVacioM);
             this.Controls.Add(this.gbFormModificar);
@@ -332,5 +357,7 @@ namespace TPWinForm
         private System.Windows.Forms.Label lbError2M;
         private System.Windows.Forms.Label lbErrorVacioM;
         private System.Windows.Forms.Label lbInfo;
+        private System.Windows.Forms.Label lbError2NombreM;
+        private System.Windows.Forms.Label lbError2CodArtM;
     }
 }

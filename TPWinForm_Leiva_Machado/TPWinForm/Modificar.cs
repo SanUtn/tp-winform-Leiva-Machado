@@ -26,13 +26,15 @@ namespace TPWinForm
         public Modificar(Articulo articulo)
         {
             InitializeComponent();
-            this.articulo = articulo;
             ocultarLabels();
+            this.articulo = articulo;
+            
         }
 
         private void Modificar_Load(object sender, EventArgs e)
         {
             cargar();
+            ocultarLabels();
             if (dataListado.CurrentRow != null)//para que no rompa si no seleccione nada
             {
                 articulo = (Articulo)dataListado.CurrentRow.DataBoundItem;
@@ -117,6 +119,7 @@ namespace TPWinForm
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            ocultarLabels();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
@@ -146,6 +149,7 @@ namespace TPWinForm
 
         private bool validarCampos()
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
             bool bandera = false;
 
             if (string.IsNullOrEmpty(txtCodArticuloM.Text))
@@ -156,7 +160,14 @@ namespace TPWinForm
 
             if (!(helper.soloLetrasYNumeros(txtCodArticuloM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
             {
-                lbError2M.Visible = true;
+                lbError2CodArtM.Visible = true;
+                bandera = true;
+            }
+
+            if (!(negocio.buscarArticulo(txtCodArticuloM.Text)))
+            {
+                lbError2CodArtM.Text = "El código de artículo es inexistente";
+                lbError2CodArtM.Visible = true;
                 bandera = true;
             }
 
@@ -168,7 +179,7 @@ namespace TPWinForm
 
             if (!(helper.soloLetrasYNumeros(txtNombreM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
             {
-                lbError2M.Visible = true;
+                lbError2NombreM.Visible = true;
                 bandera = true;
             }
 
@@ -191,7 +202,9 @@ namespace TPWinForm
         public void ocultarLabels()
         {
             lbErrorVacioM.Visible = false;
-            lbError2M.Visible = false; 
+            lbError2M.Visible = false;
+            lbError2CodArtM.Visible = false;
+            lbError2NombreM.Visible = false;
         }
 
         public void limpiarForm()
