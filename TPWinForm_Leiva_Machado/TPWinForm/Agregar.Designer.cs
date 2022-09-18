@@ -118,6 +118,7 @@ namespace TPWinForm
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(318, 252);
+            this.txtPrecio.MaxLength = 20;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(240, 20);
             this.txtPrecio.TabIndex = 6;

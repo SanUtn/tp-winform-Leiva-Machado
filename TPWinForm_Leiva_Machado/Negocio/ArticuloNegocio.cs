@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Dominio;
+
 
 
 namespace Negocio
@@ -47,8 +50,8 @@ namespace Negocio
                     art.MarcaArticulo = new Marca();
                     art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                     art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
-                    art.Precio = (decimal)datos.Lector["Precio"]; 
-               
+                    art.Precio = decimal.Round((decimal)datos.Lector["Precio"],2);
+              
 
                     lista.Add(art);
                 }
@@ -65,6 +68,7 @@ namespace Negocio
             }
         }
 
+      
         public bool buscarArticulo(string codigo)
         {
             try
@@ -291,9 +295,9 @@ namespace Negocio
                         art.MarcaArticulo = new Marca();
                         art.MarcaArticulo.Id = (int)datos.Lector["IdMarca"];
                         art.MarcaArticulo.NombreMarca = (string)datos.Lector["Marca"];
-                        art.Precio = (decimal)datos.Lector["Precio"];
+                        art.Precio = decimal.Round((decimal)datos.Lector["Precio"], 2);
 
-                        lista.Add(art);
+                    lista.Add(art);
                     }
                     return lista;
                 }

@@ -145,9 +145,6 @@ namespace TPWinForm
             txtPrecio.Clear();
         }
 
-        //private void txtPrecio_Leave(object sender, EventArgs e)
-        //{
-        //    helper.formatoMoneda(txtPrecio);
-        //}
+   
     }
 }
