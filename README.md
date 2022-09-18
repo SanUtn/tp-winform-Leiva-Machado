@@ -1,9 +1,9 @@
-# tp-winform-Leiva-Machado 
+# tp-winform-Leiva-Machado :robot:
 ![images](https://user-images.githubusercontent.com/56597872/190927363-e6f96cdb-796f-4708-ae97-d323b9fc24b4.jpg)
 
-Aplicacion de gestion desarrollada sobre un programa de escritorio para la administracion de articulos. Proyecto realizado en el marco de la materia Programacion III de la tecnicatura universitaria en programación de la Universidad Tecnologica Nacional Facultad Regional Geeneral Pacheco.
+Aplicacion de gestion desarrollada sobre un programa de escritorio para la administracion de articulos. Proyecto realizado en el marco de la materia Programacion III de la tecnicatura universitaria en programación de la Universidad Tecnologica Nacional Facultad Regional Geeneral Pacheco. :mortar_board:
 
-<h3 style="font-size: bold"> Funcionalidades </h3>
+<h3 style="font-size: bold"> Funcionalidades :rocket:</h3>
 <ul>
  <li>Listado de artículos.</li>
  <li>Búsqueda de artículos por distintos criterios.</li>
