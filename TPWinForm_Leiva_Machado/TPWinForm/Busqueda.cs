@@ -182,12 +182,12 @@ namespace TPWinForm
         {
             if (cboCampo.SelectedIndex < 0)
             {
-                MessageBox.Show("Por favor seleccione el campo para filtrar");
+                MessageBox.Show("Por favor seleccione el campo para filtrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
             if (cboCriterio.SelectedIndex < 0)
             {
-                MessageBox.Show("Por favor seleccione el criterio para filtrar");
+                MessageBox.Show("Por favor seleccione el criterio para filtrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
 
@@ -195,12 +195,12 @@ namespace TPWinForm
             {
                 if (string.IsNullOrEmpty(txbBusqueda.Text))
                 {
-                    MessageBox.Show("Cargar precio a filtrar..");
+                    MessageBox.Show("Cargar precio a filtrar..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return true;
                 }
                 if (!(helper.soloNumeros(txbBusqueda.Text)))
                 {
-                    MessageBox.Show("Solo nros...");
+                    MessageBox.Show("Solo numeros...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return true;
                 }
             }
@@ -208,7 +208,7 @@ namespace TPWinForm
             {
                 if (string.IsNullOrEmpty(txbBusqueda.Text))
                 {
-                    MessageBox.Show("Indicar un valor..");
+                    MessageBox.Show("Indicar un valor..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return true;
                 }
             }
