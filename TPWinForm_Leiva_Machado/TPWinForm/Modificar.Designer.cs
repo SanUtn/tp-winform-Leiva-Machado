@@ -48,11 +48,11 @@ namespace TPWinForm
             this.lbImagenM = new System.Windows.Forms.Label();
             this.lbPrecioM = new System.Windows.Forms.Label();
             this.gbFormModificar = new System.Windows.Forms.GroupBox();
+            this.lbError2NombreM = new System.Windows.Forms.Label();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbError2M = new System.Windows.Forms.Label();
             this.lbErrorVacioM = new System.Windows.Forms.Label();
             this.lbError2CodArtM = new System.Windows.Forms.Label();
-            this.lbError2NombreM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificar)).BeginInit();
             this.gbFormModificar.SuspendLayout();
@@ -108,6 +108,7 @@ namespace TPWinForm
             // txtDescripcionM
             // 
             this.txtDescripcionM.Location = new System.Drawing.Point(115, 68);
+            this.txtDescripcionM.MaxLength = 150;
             this.txtDescripcionM.Name = "txtDescripcionM";
             this.txtDescripcionM.Size = new System.Drawing.Size(240, 20);
             this.txtDescripcionM.TabIndex = 2;
@@ -125,6 +126,7 @@ namespace TPWinForm
             // txtCodArticuloM
             // 
             this.txtCodArticuloM.Location = new System.Drawing.Point(115, 16);
+            this.txtCodArticuloM.MaxLength = 5;
             this.txtCodArticuloM.Name = "txtCodArticuloM";
             this.txtCodArticuloM.Size = new System.Drawing.Size(240, 20);
             this.txtCodArticuloM.TabIndex = 0;
@@ -152,6 +154,7 @@ namespace TPWinForm
             // txtNombreM
             // 
             this.txtNombreM.Location = new System.Drawing.Point(115, 42);
+            this.txtNombreM.MaxLength = 50;
             this.txtNombreM.Name = "txtNombreM";
             this.txtNombreM.Size = new System.Drawing.Size(240, 20);
             this.txtNombreM.TabIndex = 1;
@@ -169,7 +172,7 @@ namespace TPWinForm
             // txtPrecioM
             // 
             this.txtPrecioM.Location = new System.Drawing.Point(116, 172);
-            this.txtPrecioM.MaxLength = 20;
+            this.txtPrecioM.MaxLength = 10;
             this.txtPrecioM.Name = "txtPrecioM";
             this.txtPrecioM.Size = new System.Drawing.Size(240, 20);
             this.txtPrecioM.TabIndex = 6;
@@ -187,6 +190,7 @@ namespace TPWinForm
             // txtImagenM
             // 
             this.txtImagenM.Location = new System.Drawing.Point(116, 146);
+            this.txtImagenM.MaxLength = 1000;
             this.txtImagenM.Name = "txtImagenM";
             this.txtImagenM.Size = new System.Drawing.Size(240, 20);
             this.txtImagenM.TabIndex = 5;
@@ -253,6 +257,17 @@ namespace TPWinForm
             this.gbFormModificar.TabIndex = 69;
             this.gbFormModificar.TabStop = false;
             // 
+            // lbError2NombreM
+            // 
+            this.lbError2NombreM.AutoSize = true;
+            this.lbError2NombreM.ForeColor = System.Drawing.Color.Red;
+            this.lbError2NombreM.Location = new System.Drawing.Point(-3, 0);
+            this.lbError2NombreM.Name = "lbError2NombreM";
+            this.lbError2NombreM.Size = new System.Drawing.Size(225, 13);
+            this.lbError2NombreM.TabIndex = 73;
+            this.lbError2NombreM.Text = "* Nombre: El campo admite letras y/o números";
+            this.lbError2NombreM.UseWaitCursor = true;
+            // 
             // lbInfo
             // 
             this.lbInfo.AutoSize = true;
@@ -295,17 +310,6 @@ namespace TPWinForm
             this.lbError2CodArtM.TabIndex = 72;
             this.lbError2CodArtM.Text = "* CodArt: El campo admite letras y/o números";
             this.lbError2CodArtM.UseWaitCursor = true;
-            // 
-            // lbError2NombreM
-            // 
-            this.lbError2NombreM.AutoSize = true;
-            this.lbError2NombreM.ForeColor = System.Drawing.Color.Red;
-            this.lbError2NombreM.Location = new System.Drawing.Point(-3, 0);
-            this.lbError2NombreM.Name = "lbError2NombreM";
-            this.lbError2NombreM.Size = new System.Drawing.Size(225, 13);
-            this.lbError2NombreM.TabIndex = 73;
-            this.lbError2NombreM.Text = "* Nombre: El campo admite letras y/o números";
-            this.lbError2NombreM.UseWaitCursor = true;
             // 
             // Modificar
             // 

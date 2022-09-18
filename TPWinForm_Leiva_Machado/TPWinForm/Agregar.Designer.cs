@@ -77,6 +77,7 @@ namespace TPWinForm
             // txtCodArticulo
             // 
             this.txtCodArticulo.Location = new System.Drawing.Point(317, 96);
+            this.txtCodArticulo.MaxLength = 5;
             this.txtCodArticulo.Name = "txtCodArticulo";
             this.txtCodArticulo.Size = new System.Drawing.Size(240, 20);
             this.txtCodArticulo.TabIndex = 0;
@@ -84,6 +85,7 @@ namespace TPWinForm
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(317, 148);
+            this.txtDescripcion.MaxLength = 150;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(240, 20);
             this.txtDescripcion.TabIndex = 2;
@@ -101,6 +103,7 @@ namespace TPWinForm
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(317, 122);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(240, 20);
             this.txtNombre.TabIndex = 1;
@@ -118,7 +121,7 @@ namespace TPWinForm
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(318, 252);
-            this.txtPrecio.MaxLength = 20;
+            this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(240, 20);
             this.txtPrecio.TabIndex = 6;
@@ -136,6 +139,7 @@ namespace TPWinForm
             // txtImagen
             // 
             this.txtImagen.Location = new System.Drawing.Point(318, 226);
+            this.txtImagen.MaxLength = 1000;
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(240, 20);
             this.txtImagen.TabIndex = 5;
