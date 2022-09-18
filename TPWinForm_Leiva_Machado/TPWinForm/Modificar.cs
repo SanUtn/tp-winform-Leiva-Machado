@@ -156,7 +156,7 @@ namespace TPWinForm
 
             if (!(helper.soloLetrasYNumeros(txtCodArticuloM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
             {
-                lbError2CodArtM.Visible = true;
+                lbError2M.Visible = true;
                 bandera = true;
             }
 
@@ -168,7 +168,7 @@ namespace TPWinForm
 
             if (!(helper.soloLetrasYNumeros(txtNombreM.Text)) && !(string.IsNullOrEmpty(txtNombreM.Text)))
             {
-                lbError2NombreM.Visible = true;
+                lbError2M.Visible = true;
                 bandera = true;
             }
 
@@ -191,9 +191,7 @@ namespace TPWinForm
         public void ocultarLabels()
         {
             lbErrorVacioM.Visible = false;
-            lbError2M.Visible = false;
-            lbError2CodArtM.Visible = false;
-            lbError2NombreM.Visible = false;
+            lbError2M.Visible = false; 
         }
 
         public void limpiarForm()
