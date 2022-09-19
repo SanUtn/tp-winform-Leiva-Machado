@@ -41,6 +41,7 @@
             // 
             // msNavegacion
             // 
+            this.msNavegacion.BackColor = System.Drawing.Color.Black;
             this.msNavegacion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventanaHome,
             this.ventanaListado,
@@ -57,50 +58,64 @@
             // 
             // ventanaHome
             // 
+            this.ventanaHome.BackColor = System.Drawing.Color.White;
+            this.ventanaHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaHome.Name = "ventanaHome";
-            this.ventanaHome.Size = new System.Drawing.Size(52, 20);
+            this.ventanaHome.Size = new System.Drawing.Size(53, 20);
             this.ventanaHome.Text = "Home";
             this.ventanaHome.Click += new System.EventHandler(this.ventanaHome_Click);
             // 
             // ventanaListado
             // 
+            this.ventanaListado.BackColor = System.Drawing.Color.White;
+            this.ventanaListado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaListado.Name = "ventanaListado";
-            this.ventanaListado.Size = new System.Drawing.Size(57, 20);
+            this.ventanaListado.Size = new System.Drawing.Size(58, 20);
             this.ventanaListado.Text = "Listado";
             this.ventanaListado.Click += new System.EventHandler(this.ventanaListado_Click);
             // 
             // ventanaBusqueda
             // 
+            this.ventanaBusqueda.BackColor = System.Drawing.Color.White;
+            this.ventanaBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaBusqueda.Name = "ventanaBusqueda";
-            this.ventanaBusqueda.Size = new System.Drawing.Size(71, 20);
+            this.ventanaBusqueda.Size = new System.Drawing.Size(73, 20);
             this.ventanaBusqueda.Text = "Busqueda";
             this.ventanaBusqueda.Click += new System.EventHandler(this.ventanaBusqueda_Click);
             // 
             // ventanaAgregar
             // 
+            this.ventanaAgregar.BackColor = System.Drawing.Color.White;
+            this.ventanaAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaAgregar.Name = "ventanaAgregar";
-            this.ventanaAgregar.Size = new System.Drawing.Size(61, 20);
+            this.ventanaAgregar.Size = new System.Drawing.Size(64, 20);
             this.ventanaAgregar.Text = "Agregar";
             this.ventanaAgregar.Click += new System.EventHandler(this.ventanaAgregar_Click);
             // 
             // ventanaModificar
             // 
+            this.ventanaModificar.BackColor = System.Drawing.Color.White;
+            this.ventanaModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaModificar.Name = "ventanaModificar";
-            this.ventanaModificar.Size = new System.Drawing.Size(70, 20);
+            this.ventanaModificar.Size = new System.Drawing.Size(72, 20);
             this.ventanaModificar.Text = "Modificar";
             this.ventanaModificar.Click += new System.EventHandler(this.ventanaModificar_Click);
             // 
             // ventanaEliminar
             // 
+            this.ventanaEliminar.BackColor = System.Drawing.Color.White;
+            this.ventanaEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaEliminar.Name = "ventanaEliminar";
-            this.ventanaEliminar.Size = new System.Drawing.Size(62, 20);
+            this.ventanaEliminar.Size = new System.Drawing.Size(63, 20);
             this.ventanaEliminar.Text = "Eliminar";
             this.ventanaEliminar.Click += new System.EventHandler(this.ventanaEliminar_Click);
             // 
             // ventanaVerDetalle
             // 
+            this.ventanaVerDetalle.BackColor = System.Drawing.Color.White;
+            this.ventanaVerDetalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventanaVerDetalle.Name = "ventanaVerDetalle";
-            this.ventanaVerDetalle.Size = new System.Drawing.Size(73, 20);
+            this.ventanaVerDetalle.Size = new System.Drawing.Size(79, 20);
             this.ventanaVerDetalle.Text = "Ver detalle";
             this.ventanaVerDetalle.Click += new System.EventHandler(this.ventanaVerDetalle_Click);
             // 
@@ -111,6 +126,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuText;
             this.ClientSize = new System.Drawing.Size(870, 502);
             this.Controls.Add(this.msNavegacion);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
