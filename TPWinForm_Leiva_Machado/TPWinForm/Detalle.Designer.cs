@@ -42,8 +42,9 @@ namespace TPWinForm
             // pbDetalle
             // 
             this.pbDetalle.BackColor = System.Drawing.Color.Transparent;
-            this.pbDetalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbDetalle.Location = new System.Drawing.Point(110, 250);
+            this.pbDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.pbDetalle.Name = "pbDetalle";
             this.pbDetalle.Size = new System.Drawing.Size(201, 181);
             this.pbDetalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,10 +55,10 @@ namespace TPWinForm
             // 
             this.lbNombre.BackColor = System.Drawing.Color.Transparent;
             this.lbNombre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre.Location = new System.Drawing.Point(0, 0);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(417, 24);
+            this.lbNombre.Size = new System.Drawing.Size(417, 41);
             this.lbNombre.TabIndex = 2;
             this.lbNombre.Text = "nombre";
             // 
@@ -65,8 +66,8 @@ namespace TPWinForm
             // 
             this.lbDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.lbDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescripcion.Location = new System.Drawing.Point(0, 24);
+            this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescripcion.Location = new System.Drawing.Point(0, 41);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(417, 78);
             this.lbDescripcion.TabIndex = 3;
@@ -75,50 +76,52 @@ namespace TPWinForm
             // lblPrecio
             // 
             this.lblPrecio.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(145, 204);
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(110, 208);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(100, 24);
+            this.lblPrecio.Size = new System.Drawing.Size(201, 24);
             this.lblPrecio.TabIndex = 4;
             this.lblPrecio.Text = "$";
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbMarca
             // 
             this.lbMarca.BackColor = System.Drawing.Color.Transparent;
             this.lbMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarca.Location = new System.Drawing.Point(0, 102);
+            this.lbMarca.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMarca.Location = new System.Drawing.Point(0, 119);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(417, 24);
             this.lbMarca.TabIndex = 5;
-            this.lbMarca.Text = "Marca: ";
+            this.lbMarca.Text = "  Marca: ";
             // 
             // lbCategoria
             // 
             this.lbCategoria.BackColor = System.Drawing.Color.Transparent;
             this.lbCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategoria.Location = new System.Drawing.Point(0, 126);
+            this.lbCategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategoria.Location = new System.Drawing.Point(0, 143);
             this.lbCategoria.Name = "lbCategoria";
             this.lbCategoria.Size = new System.Drawing.Size(417, 24);
             this.lbCategoria.TabIndex = 6;
-            this.lbCategoria.Text = "Categoria:";
+            this.lbCategoria.Text = "  Categoría: ";
             // 
             // lbCodigo
             // 
             this.lbCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lbCodigo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(0, 150);
+            this.lbCodigo.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigo.Location = new System.Drawing.Point(0, 167);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(417, 24);
             this.lbCodigo.TabIndex = 7;
-            this.lbCodigo.Text = "Codigo: ";
+            this.lbCodigo.Text = "  Código: ";
             // 
             // Detalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(417, 443);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.lbCategoria);

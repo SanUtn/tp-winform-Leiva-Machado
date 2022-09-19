@@ -26,10 +26,10 @@ namespace TPWinForm
         private void cargarDetalle(Articulo aux)
         {
             lbNombre.Text = aux.NombreArticulo;
-            lbDescripcion.Text = string.IsNullOrWhiteSpace(aux.Descripcion) ? "Sin descripción" : aux.Descripcion;
-            lblPrecio.Text += aux.Precio;
-            lbCategoria.Text += string.IsNullOrWhiteSpace(aux.CategoriaArticulo.NombreCategoria) ? " Sin categoria" : aux.CategoriaArticulo.NombreCategoria;
-            lbMarca.Text += string.IsNullOrWhiteSpace(aux.MarcaArticulo.NombreMarca) ? " Sin marca" : aux.MarcaArticulo.NombreMarca;
+            lbDescripcion.Text = string.IsNullOrWhiteSpace(aux.Descripcion) ? " Sin descripción " : aux.Descripcion;
+            lblPrecio.Text += decimal.Round(aux.Precio,2);
+            lbCategoria.Text += string.IsNullOrWhiteSpace(aux.CategoriaArticulo.NombreCategoria) ? " Sin categoría " : aux.CategoriaArticulo.NombreCategoria;
+            lbMarca.Text += string.IsNullOrWhiteSpace(aux.MarcaArticulo.NombreMarca) ? " Sin marca " : aux.MarcaArticulo.NombreMarca;
             lbCodigo.Text += aux.CodArticulo;
             cargarImagen(aux.UrlImagen);
         }
